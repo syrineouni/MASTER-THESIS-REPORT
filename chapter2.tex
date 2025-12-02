@@ -1,0 +1,239 @@
+\chapter{State-Of-The-Art in Multimodal MS Detection}
+\label{ch:chap2}
+
+\section{Introduction}
+Traditional MS detection methods, such as MRI, CSF biomarkers, and clinical evaluations, have limitations in accuracy and early diagnosis. Multimodal approaches aim to
+improve detection by integrating multiple data sources, leveraging AI and deep learning
+for enhanced analysis. These methods not only boost diagnostic precision but also provide
+explainability, aiding clinical decision-making. This chapter reviews recent multimodal
+techniques for MS detection, comparing their effectiveness and challenges. A summary
+table highlights key findings, followed by a discussion on future research directions.
+
+\subsection{Multimodal Data in MS Detection}
+
+The integration of diverse data modalities offers a holistic view of multiple sclerosis (MS), capturing its multifaceted pathology and enhancing diagnostic accuracy. Multimodal strategies leverage the complementary strengths of imaging, clinical assessments, and molecular biomarkers to overcome the limitations inherent in any single modality. This multimodal perspective is essential because MS manifests through structural brain changes, clinical symptoms, and immunological abnormalities that are not all visible on a single test. :contentReference[oaicite:0]{index=0}
+
+\subsubsection{Imaging Modalities}
+
+Magnetic resonance imaging (MRI) remains the cornerstone of MS diagnosis and monitoring owing to its sensitivity to demyelinating lesions and neurodegeneration. Standard sequences used in clinical and research practice include T1-weighted (for anatomy and “black holes”), T2-weighted (for total lesion burden), and FLAIR (which suppresses CSF and enhances periventricular/juxtacortical lesion visibility). Advanced sequences such as diffusion tensor imaging (DTI), magnetization transfer imaging (MTI) and susceptibility-weighted imaging (SWI) add microstructural and tissue-integrity information that complements conventional contrasts. 
+
+Large multicentre cohorts and consortia have demonstrated the value of combining MRI with other modalities: for example, the FutureMS cohort (Kearns et al., 2022) integrates MRI with genetic and biomarker data to enable individualized prediction models in newly diagnosed RRMS patients. Multimodal imaging studies have also explored PET markers of neuroinflammation and EEG measures of functional connectivity as complementary sources of pathophysiological information, particularly when studying progression or conversion to secondary progressive MS. These alternative modalities are promising for specific research questions (neuroinflammation, metabolism, connectivity) but remain largely adjunctive to MRI in routine diagnosis. 
+
+Practical considerations — such as 2D vs 3D acquisitions, spinal cord imaging challenges, and harmonization across scanners — strongly influence the choice of sequences for AI-driven analyses. The literature favors 3D, isotropic acquisitions when possible for volumetric and deep-learning segmentation tasks, while also recognizing that spinal cord imaging has specific technical constraints that require bespoke preprocessing and acquisition protocols. :contentReference[oaicite:3]{index=3}
+
+\subsubsection{Clinical Assessments and Health Records}
+
+Clinical variables (e.g., Expanded Disability Status Scale — EDSS — scores, neurological exam findings, symptom history, cognitive test results) provide indispensable context for image-based findings. These measures capture functional impact and temporal disease dynamics that MRI alone may not reflect. Several studies demonstrate that integrating structured clinical data or EHR-derived features with imaging significantly improves predictive performance and clinical relevance. For instance, Ismail et al. (2024) reported near-perfect classification accuracy when combining MRI-derived deep features with electronic health records in a multimodal pipeline, illustrating the strong synergy between image and clinical sources. Integrating longitudinal clinical records also enables temporal modelling of disease activity and better risk stratification. 
+
+However, variability and missingness in clinical records (different scoring habits, intermittent documentation) present challenges for multimodal pipelines. Real-world integration therefore typically requires rigorous preprocessing (imputation, normalization, encoding), temporal alignment, and attention to bias introduced by heterogeneous documentation standards. :contentReference[oaicite:5]{index=5}
+
+\subsubsection{Biofluid Biomarkers}
+
+Biofluid markers from cerebrospinal fluid (CSF) and blood provide molecular-level evidence of inflammation and neuroaxonal injury that complements MRI and clinical assessments. Classical CSF markers such as oligoclonal bands (OCBs) and $\kappa$-free light chains remain clinically useful for diagnosis and can substitute for dissemination-in-time in some contexts. Blood biomarkers, particularly serum neurofilament light (sNfL) and GFAP, are increasingly used as minimally invasive indicators of active axonal damage and disease progression. Several recent reviews and cohort studies report that combining sNfL/GFAP with MRI metrics (and cognitive scores) improves prognostic models for disability and cognitive decline. 
+
+Limitations of biofluid markers include imperfect disease specificity (values may be elevated in other neurological disorders) and variability across assay platforms. Nevertheless, the consensus in multimodal studies is that biomarkers markedly increase confidence in early or ambiguous cases when combined with imaging and clinical measures. 
+
+\subsubsection{Multimodal Data Integration and Artificial Intelligence}
+
+The heterogeneity, high dimensionality, and modality-specific noise of multimodal MS data motivate the use of AI and data-fusion frameworks. Deep learning and hybrid architectures enable automatic representation learning from images while classical and modern ML methods can ingest tabular clinical/biomarker data; fusion strategies (early, late, hybrid, attention-based) reconcile these sources in a coherent model. Reviews in the field underline that AI-driven multimodal fusion can address missing data, heterogeneous acquisition protocols, and cross-site variability, producing models that better capture phenotypic heterogeneity and improve clinical tasks such as diagnosis, prognosis, and patient stratification. 
+
+In practice, multimodal integration must be paired with careful preprocessing (harmonization, normalization), robust validation across cohorts, and techniques to mitigate modality-dominance (i.e., when one modality consistently outweighs others in model decisions). Attention-based fusion and modular pipelines are commonly proposed solutions in recent literature. :contentReference[oaicite:9]{index=9}
+
+\subsection{Machine Learning and Deep Learning in Multimodal MS Analysis}
+
+Machine learning (ML) and deep learning (DL) have become central to modern MS research because they can integrate heterogeneous data sources---MRI, clinical variables, cognitive scores, and cerebrospinal fluid (CSF) biomarkers---into unified predictive models. Traditional diagnostic workflows rely on expert interpretation of MRI alongside clinical criteria such as the 2017 McDonald guidelines, yet ML/DL systems enable systematic extraction of subtle imaging patterns, quantitative lesion metrics, and non-linear interactions between biological and clinical indicators. Recent reviews emphasize that multimodal AI systems significantly outperform single-modality pipelines by capturing complementary information from structural injury, inflammatory activity, and patient-specific disease trajectories~\cite{Lassmann2018}.
+
+\subsubsection{Deep Learning for Multimodal Feature Representation}
+
+Deep learning has driven most breakthroughs in multimodal MS analysis due to its ability to learn hierarchical representations from imaging while simultaneously encoding structured tabular variables. Convolutional neural networks (CNNs)---including ResNet, DenseNet, and U-Net--based encoders---are widely employed to extract high-level MRI features such as lesion morphology, periventricular distribution, cortical involvement, and microstructural abnormalities. These representations can be fused with vectors representing EDSS scores, OCB status, demographic information, and additional clinical variables. Multimodal studies consistently report major gains when combining CNN-derived MRI features with clinical or EHR data, often improving AUROC by 8--15\% compared to single-modality setups~\cite{ismail2024, zhang2023}.
+
+Hybrid deep learning architectures typically rely on modality-specific encoders followed by shared fusion layers. For instance, models using DenseNet or ResNet for MRI feature extraction and multilayer perceptrons (MLPs) or recurrent units for clinical time-series data have demonstrated improved prediction of disease activity, conversion from CIS to MS, and cognitive impairment. Zhang et al.~\cite{zhang2023} proposed a multimodal architecture integrating MRI, structured EHR, and clinical notes through graph-attention mechanisms and GRUs, achieving substantial improvements over unimodal frameworks.
+
+\subsubsection{CNN-Based Lesion Segmentation as a Multimodal Component}
+
+Lesion segmentation is a central task in MS imaging analysis, enabling quantitative assessments such as total lesion volume, lesion count, and spatial distribution. Fully convolutional networks (FCNs), in particular U-Net and its derivatives (residual U-Net, attention U-Net, and 3D U-Net), remain the dominant architectures for this task. Benchmark studies on ISBI and MICCAI MS lesion segmentation challenges consistently report Dice similarity coefficients (DSC) around 0.62--0.66 for robust U-Net variants, with performance gains achieved through attention modules, deeper encoders, and advanced augmentation strategies~\cite{raab2020, raab2023}.
+
+Deep learning–based segmentation also provides lesion-derived biomarkers that can be integrated with clinical and CSF features to enhance multimodal classification or disease monitoring. Prior work demonstrates that including quantitative lesion profiles in multimodal models improves prediction of disability progression and cognitive decline~\cite{filippi2019}.
+
+\subsubsection{Hybrid and Advanced Multimodal AI Pipelines}
+
+Advanced hybrid models combine multiple architectural components to address the heterogeneity of MS datasets. Recent approaches integrate CNNs with transformers, graph neural networks, or recurrent architectures to model spatial, temporal, and relational properties of multimodal inputs. Examples include systems where 3D CNNs encode MRI volumes while LSTMs process longitudinal EDSS trajectories, or where graph-attention networks model relationships among lesions, clinical variables, or patient phenotypes~\cite{kim2020}.
+
+Metaheuristic-assisted hybrid pipelines have also been explored, where DL-derived imaging features are combined with traditional ML classifiers such as SVMs or XGBoost, achieving high accuracy but often limited to single-center datasets with restricted variability~\cite{khattap2025}. This highlights the need for rigorous multi-site evaluation and harmonization.
+
+\subsubsection{Traditional Machine Learning as Baselines}
+
+Traditional ML techniques---SVMs, random forests, logistic regression, and k-nearest neighbors---continue to serve as essential baselines and remain effective for small datasets or when interpretability is prioritized. These models integrate handcrafted radiomic features, clinical descriptors, and biomarker data. Comparative studies show that deep learning models typically outperform traditional ML by approximately 10--12\% in multimodal classification tasks, particularly when handling high-dimensional MRI data~\cite{anitha2024}.
+
+Traditional ML remains important for feature selection and dimensionality reduction using approaches such as LASSO, recursive feature elimination (RFE), and random forest–based importance ranking, which help identify the most relevant clinical or biomarker features before fusion with imaging-derived representations.
+
+\subsubsection{Challenges in Multimodal MS Machine Learning}
+
+Despite rapid progress, significant challenges persist. These include dataset heterogeneity across centers, variability in MRI acquisition protocols, missing or imbalanced modalities, small sample sizes, and the lack of standardized multimodal benchmarks. Many high-performing models are trained on single-center datasets, limiting generalizability and clinical adoption. Current research efforts emphasize harmonization, domain adaptation, and explainability as essential components for reliable multimodal MS models~\cite{statsenko2023}.
+
+
+
+\subsection{Explainability in AI Models for MS Detection}
+\label{subsec:explainability}
+
+Deep learning models exhibit strong predictive performance but often lack transparency, limiting their acceptance in clinical environments. Explainable artificial intelligence (XAI) aims to bridge this gap by providing interpretable insights into model decisions and enabling clinicians to validate automated predictions.
+
+\subsubsection{Model-Agnostic Feature Attribution}
+
+SHAP (SHapley Additive exPlanations) is widely used for quantifying the contribution of individual clinical, imaging-derived, or biomarker features to a model’s output. \textbf{Nicolaou et al. (2023)} applied SHAP to a multimodal MS model and identified lesion heterogeneity and EDSS scores as key progression indicators, showcasing SHAP’s ability to generate clinically meaningful interpretations~\cite{nicolaou2023}.
+
+\subsubsection{Attention-Based Explanations}
+
+Attention mechanisms embedded within multimodal networks offer intrinsic interpretability by revealing how the model weights different input modalities. \textbf{Cruciani et al. (2021)} incorporated channel and spatial attention into a 3D-CNN for MS detection, producing saliency maps that focused primarily on lesion-rich periventricular and juxtacortical regions~\cite{cruciani2021}. Attention mechanisms are particularly relevant for adaptive AI pipelines, as they enable patient-specific modality weighting—an essential concept in clinically realistic MS detection.
+
+\subsubsection{Saliency-Based Explanations for Imaging}
+
+Grad-CAM and related saliency methods provide spatially localized explanations by highlighting MRI regions that are most influential for a model’s prediction~\cite{Selvaraju2017}. Although less common in MS than in oncology or radiology research, Grad-CAM complements feature attribution methods by offering voxel-level interpretability—a key requirement for validating lesion-driven predictions.
+
+XAI remains essential for clinical deployment, but challenges persist: explanation consistency varies across methods, and the lack of standardized evaluation metrics complicates integration into clinical workflows. Nonetheless, multimodal XAI frameworks combining saliency maps, feature attributions, and attention-based explanations represent a promising direction for trustworthy MS AI systems.
+
+\section{Comparative Analysis}
+Multimodal approaches face significant hurdles that impact their clinical translation. \textbf{Raab et al. (2020, 2023)} highlighted technical challenges in synchronizing MRI sequences and limitations of 2D CNNs, advocating for 3D models \cite{raab2020,raab2023}. \textbf{Khattap et al. (2025)} noted high computational demands of hybrid AI frameworks \cite{khattap2025}. Interpretability remains a challenge, with \textbf{Cruciani et al. (2021) } and \textbf{Nicolaou et al. (2023)} requiring further refinement for clinical transparency \cite{cruciani2021,nicolaou2023}. Generalizability is limited by small or homogeneous datasets, such as ISBI 2015’s 19 cases \cite{nabizadeh2022}. \textbf{Ismail et al. (2024) } reported issues with missing modalities and variable data quality \cite{ismail2024}. \textbf{Wahlig et al. (2023)} warned of overfitting risks in DL models \cite{wahlig2023}. Regulatory barriers, like the FDA’s SaMD framework, and data privacy concerns further complicate adoption \cite{Zhao2021,ismail2024}. Standardized MRI protocols and public datasets could mitigate these issues \cite{Filippi2016}.
+
+
+The following table provides a comprehensive comparison of multimodal MS detection studies, summarizing their tasks, modalities, datasets, case numbers, architectures, and performance metrics.
+
+\newpage
+
+\begin{table}[H]
+    \centering
+    \scriptsize
+    \renewcommand{\arraystretch}{1.2}
+    \setlength{\tabcolsep}{3pt}
+    \begin{tabularx}{\textwidth}{|X|X|X|X|X|X|X|}
+    \hline
+    \rowcolor{lightgray}\textbf{Works } & \textbf{Task} & \textbf{Modalities} & \textbf{Dataset} & \textbf{Cases} & \textbf{Architecture} & \textbf{Metrics} \\ 
+    \hline
+    Kim et al. 2020 \cite{kim2020} & MS management review & Imaging, Clinical & Literature review & - & - & - \\ 
+    \hline
+    Raab et al. 2020 \cite{raab2020} & Lesion segmentation & MRI (FLAIR, T1w, T2w) & ISBI 2015, MICCAI 2016 & ISBI: 19, MICCAI: 15 & 2D U-Net-like CNN & DSC: 0.64, PPV: 0.85, Score: 92.661 \\ 
+    \hline
+    Kearns et al. 2022 \cite{kearns2022} & Disease heterogeneity study & MRI, Genetics, Biomarkers & FutureMS cohort & 440 MS, 103 controls & Longitudinal cohort study & - \\ 
+    \hline
+    Nabizadeh et al. 2022 \cite{nabizadeh2022} & Diagnostic review & Imaging, Clinical & Systematic review & - & - & - \\ 
+    \hline
+    Nicolaou et al. 2023 \cite{nicolaou2023} & Progression prediction (EDSS > 3.5) & MRI (T2w), Clinical (EDSS) & Single-center & 38 CIS & Gradient Boosting & Accuracy: 75\%, Sensitivity: 83\% \\ 
+    \hline
+    Raab et al. 2023 \cite{raab2023} & Lesion segmentation & MRI (FLAIR, T1w, T2w) & ISBI 2015, MICCAI 2016 & ISBI: 19, MICCAI: 15 & 2D U-Net-like CNN & Score: 92.67, DSC: 0.66, PPV: 0.87 \\ 
+    \hline
+    Rehák Bučková et al. 2023 \cite{rehak2023} & Classification, Motor disability prediction & MRI (DTI, T1w, fMRI) & Single-center & 64 MS, 65 controls & FS-SVM, PCA-LR, FS-SVR, PCA-LinR & Accuracy: 96.1\%, R: 0.28–0.46 \\ 
+    \hline
+    Rondinella et al. 2023 \cite{rondinella2023} & Lesion segmentation & MRI (FLAIR) & Catania cohort, ISBI 2015 & 5 MS (Catania), 19 (ISBI) & FC-DenseNet + Attention + LSTM & Dice: 0.84–0.89, PPV: 0.85–0.93 \\ 
+    \hline
+    Statsenko et al. 2023 \cite{statsenko2023} & Disability and SPMS prediction & MRI, PET, EEG, Biomarkers, Cognitive & Systematic review & - & Meta-analysis & - \\ 
+    \hline
+    Wahlig et al. 2023 \cite{wahlig2023} & Lesion segmentation & MRI (FLAIR, T1w post-Gd) & UCSF cohort, ISBI 2015 & 149 MS (UCSF), 19 (ISBI) & 3D U-Net with transfer learning & Sensitivity: 0.63, PPV: 0.70 \\ 
+    \hline
+    Zhang et al. 2023 \cite{zhang2023} & Severity prediction (EDSS > 4.0) & MRI (T1, T2, FLAIR, PD), EHR, Clinical notes & Single-center & 300 MS & Multimodal DNN (ResNet, Graph Attention, GRU) & AUROC: +25\% over single-modality \\ 
+    \hline
+    Al-iedani et al. 2024 \cite{aliedani2024} & Cognitive decline prediction & MRI (MRS, DTI, volumetrics), Clinical (ARCS, SDMT) & Longitudinal cohort & 43 MS & GLMnet & R²: 0.54 (ARCS), AUC: 0.92 \\ 
+    \hline
+    Anderhalten et al. 2024 \cite{anderhalten2024} & Diagnosis and prognosis & MRI, Biofluid biomarkers & Literature review & - & Biomarker analysis & - \\ 
+    \hline
+    Andorra et al. 2024 \cite{andorra2024} & Severity prediction & MRI, OCT, Genomics, Cytomics, Phosphoproteomics & Sys4MS, Barcelona cohorts & 322 MS, 98 controls (Sys4MS) & Random Forest & AUC: 0.62–0.81 (EDSS, NEDA) \\ 
+    \hline
+    Anitha et al. 2024 \cite{anitha2024} & Method comparison & Clinical, Imaging, Speech, Genetic & Literature review & - & SVM, RF, XGBoost, CNN, ANN & - \\ 
+    \hline
+    Ismail et al. 2024 \cite{ismail2024} & MS detection & MRI, Health records & Kaggle MS dataset & 271 & DenseNet-201 + Bi-LSTM + MLP & Accuracy: 99.8\%, F1: 98.7\% \\ 
+    \hline
+    Khattap et al. 2025 \cite{khattap2025} & MS diagnosis & MRI & UCI datasets, brain MRI & 425 (262 MS, 163 controls) & Multi-view ResNet + QRIME & Accuracy: 98.29\%, F1: 97.85\% \\ 
+    \hline
+    \end{tabularx}
+    \caption{Comprehensive comparison of multimodal MS detection and prediction studies. Key abbreviations: DSC=Dice-Sørensen Coefficient, PPV=Positive Predictive Value, AUC=Area Under the Curve, R²=Coefficient of Determination, F1=F1-score.}
+    \label{tab:ms_studies_multimodal}
+\end{table}
+\newpage
+\subsection{Assessment of Related Works}
+Table \ref{tab:ms_project_assessment} evaluates multimodal MS studies for alignment with goals of integrating clinical history, MRI, and CSF biomarkers, focusing on segmentation, classification, and explainability. It assesses criteria like modality types, task inclusion, explainable AI integration, public dataset usage, and multi-site data. This structured analysis identifies gaps in current research approaches.
+
+\begin{table}[H]
+    \centering
+    \scriptsize
+    \renewcommand{\arraystretch}{1.2}
+    \setlength{\tabcolsep}{3pt}
+    \begin{tabularx}{\textwidth}{|X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+    \hline
+    \rowcolor{lightgray}\textbf{Citation} & \multicolumn{3}{c|}{\textbf{Modalities Used}} & \textbf{Segmenta-tion Task} & \textbf{Classifica-tion Task} & \textbf{Explain-ability (XAI)} & \textbf{Public Dataset Benchmark} & \textbf{Multi-site Data} \\ 
+    \arrayrulecolor{black}\cline{2-3}
+    
+    \rowcolor{lightgray} & 
+    
+    \textbf{\cellcolor{lightgray!30}MRI} & 
+    
+    \textbf{\cellcolor{lightgray!30}CSF Biomarkers} & 
+    
+    \textbf{\cellcolor{lightgray!30}Clinical Data} & 
+    \cellcolor{lightgray} & 
+    \cellcolor{lightgray} & 
+    \cellcolor{lightgray} & 
+    \cellcolor{lightgray} & 
+    \cellcolor{lightgray} \\ 
+    \arrayrulecolor{black}\hline
+    
+    Raab et al. (2020) \cite{raab2020} & Yes & No & No & Yes & No & No & Yes & Yes \\ 
+    \hline
+    Kearns et al. (2022) \cite{kearns2022} & Yes & Yes & No & No & No & No & No & Yes \\ 
+    \hline
+    Zhang et al. (2023) \cite{zhang2023} & Yes & No & Yes & No & Yes & No & No & No \\ 
+    \hline
+    Raab et al. (2023) \cite{raab2023} & Yes & No & No & Yes & No & No & Yes & Yes \\ 
+    \hline
+    Statsenko et al. (2023) \cite{statsenko2023} & Yes & Yes & Yes & No & Yes & No & No & No \\ 
+    \hline
+    Nicolaou et al. (2023) \cite{nicolaou2023} & Yes & No & Yes & No & Yes & Yes & No & No \\ 
+    \hline
+    Wahlig et al. (2023) \cite{wahlig2023} & Yes & No & No & Yes & No & No & Yes & Yes \\ 
+    \hline
+    Rondinella et al. (2023) \cite{rondinella2023} & Yes & No & No & Yes & No & Yes & Yes & Yes \\ 
+    \hline
+    Rehák Bučková et al. (2023) \cite{rehak2023} & Yes & No & No & No & Yes & No & No & No \\ 
+    \hline
+    Andorra et al. (2024) \cite{andorra2024} & Yes & No & No & No & Yes & No & No & Yes \\ 
+    \hline
+    Anitha et al. (2024) \cite{anitha2024} & Yes & No & Yes & No & Yes & No & No & No \\ 
+    \hline 
+    Anderhalten et al. (2024) \cite{anderhalten2024} & Yes & Yes & Yes & No & Yes & No & No & No \\ 
+    \hline
+    Ismail et al. (2024) \cite{ismail2024} & Yes & No & Yes & No & Yes & No & Yes & No \\ 
+    \hline
+    Al-iedani et al. (2024) \cite{aliedani2024} & Yes & No & Yes & No & Yes & No & No & No \\ 
+    \hline
+    Khattap et al. (2025) \cite{khattap2025} & Yes & No & No & No & Yes & No & Yes & No \\ 
+    \hline
+    \end{tabularx}
+    \caption{Assessment of multimodal MS studies.}
+    \label{tab:ms_project_assessment}
+    \end{table}
+
+The assessment reveals significant gaps in current multimodal MS research, particularly in the integration of CSF biomarkers and explainable AI (XAI). Most studies rely heavily on MRI, with limited incorporation of CSF biomarkers and clinical data, and only a few, such as Nicolaou et al. (2023) and Rondinella et al. (2023), address explainability \cite{nicolaou2023, rondinella2023}. Ismail et al. (2024) stands out for its alignment with our approach, achieving 99.8\% accuracy by integrating MRI and clinical health records using a hybrid DenseNet-201 and Bi-LSTM architecture \cite{ismail2024}. However, their work omits CSF biomarkers and XAI, which our framework addresses by incorporating CSF data (e.g., oligoclonal bands, neurofilament light chain) and SHAP-based explanations to enhance clinical interpretability. The limited use of multi-site data and the scarcity of segmentation tasks combined with explainability further highlight the novelty of our comprehensive approach, which integrates clinical history, MRI, CSF biomarkers, and XAI for robust MS detection and prognosis.
+
+
+
+
+
+
+\section{Research Motivation and Objective}
+
+
+Multiple Sclerosis (MS) remains difficult to diagnose due to its heterogeneous clinical presentation and the variability of lesion patterns across patients. Although MRI, clinical assessments, and cerebrospinal fluid (CSF) biomarkers each provide valuable information, they are often interpreted separately in routine practice, which may contribute to delayed diagnosis and inconsistent evaluations.
+
+This research is motivated by the need for a unified and clinically coherent approach that brings these complementary data sources together. Integrating structural imaging with clinical and biological indicators offers a more complete view of MS pathology and can improve diagnostic confidence. At the same time, explainability is essential for clinical adoption, as neurologists require transparent and interpretable justifications for AI-driven predictions.
+
+The objective of this work is to develop MSFusionXAI, an explainable multimodal framework designed to enhance MS detection and interpretation. The system integrates diverse patient information within a single decision-support pipeline while providing clear, clinically aligned explanations.
+
+Overall, this research aims to deliver a reliable and transparent tool that supports neurologists in making earlier and more confident MS diagnoses.
+
+
+\section{Conclusion}
+
+The literature reviewed in this chapter shows that the integration of diverse data modalities, including imaging, clinical assessments, and biofluid biomarkers, substantially improves both the detection and prognosis of Multiple Sclerosis. Advanced AI approaches,
+particularly deep learning and hybrid models, yield high diagnostic performance and improved patient stratification. Nevertheless, significant challenges remain, including data
+heterogeneity, high computational requirements, and issues with model interpretability,
+all of which currently impede broader clinical adoption. Future research should focus on
+standardizing multimodal datasets, developing scalable and transparent AI models, and
+validating these approaches across diverse patient cohorts to facilitate the translation of research findings into clinical practice.

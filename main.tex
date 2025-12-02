@@ -1,0 +1,279 @@
+\documentclass[a4paper,12pt]{report}
+
+% Packages
+\usepackage{amsmath} % For mathematical equations
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{a4wide}
+\usepackage{graphicx}
+\usepackage{polyglossia}
+
+\usepackage{placeins}
+%pour la mise en page des tableaux
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\usepackage{color, colortbl}
+\definecolor{Gray}{gray}{0.9}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{array} % for extrarowheight
+\usepackage{lscape}
+\usepackage{afterpage}
+\usepackage{rotating}
+\usepackage[nottoc,notlof,notlot]{tocbibind}
+\usepackage{tocloft}
+\usepackage{pdfpages}
+\graphicspath{{images/}{images_pfe/}}
+\newlength\figureheight
+\newlength\figurewidth
+\usepackage{ifthen}
+\usepackage{ifpdf}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17} % or your installed version
+% \pgfplotsset{compat=1.18} % 2024or your installed version
+
+\usepackage[citestyle=numeric,bibstyle=numeric,doi=true,isbn=false,eprint=false,maxcitenames=1,uniquelist=false,sorting=none,backend=biber,defernumbers=true,language=english]{biblatex}
+\usepackage{csquotes}
+\usepackage[nottoc]{tocbibind}
+\ifpdf
+\usepackage[pdftex]{hyperref}
+\else
+\usepackage{hyperref}
+\fi
+\usepackage{color}
+\hypersetup{%
+colorlinks=true,
+linkcolor=black,
+citecolor=black,
+urlcolor=blue}
+% \urlstyle{same}
+\usepackage[top=2.5cm,bottom=2.5cm,right=2.5cm,left=2.5cm]{geometry}
+\usepackage{changepage}
+
+\usepackage{tabularx}
+    \newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\usepackage{longtable}
+
+\usepackage{xltabular}
+\renewcommand{\tablename}{Tableau}
+\renewcommand{\figurename}{Figure}
+
+
+
+\usepackage[citestyle=numeric,bibstyle=numeric,doi=true,isbn=false,eprint=false,maxcitenames=1,uniquelist=false,sorting=none,backend=biber,language=english]{biblatex}
+\addbibresource{references.bib}
+
+\AtEveryBibitem{
+  \ifentrytype{misc}{
+  }{
+    \clearfield{url}
+    \clearfield{urlyear}
+  }
+}
+
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{3}
+
+
+
+\setlength\arrayrulewidth{1pt}
+\renewcommand{\baselinestretch}{1.05}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\bfseries\nouppercase{\leftmark}}
+\rfoot{\bfseries\thepage}
+\setlength{\headheight}{14.5pt}
+
+\let\headruleORIG\headrule
+
+\renewcommand{\headrule}{\color{black} \headruleORIG}
+\renewcommand{\headrulewidth}{1.0pt}
+\usepackage{colortbl}
+\arrayrulecolor{black}
+
+\fancypagestyle{plain}{
+  \fancyhead{}
+  \fancyfoot[R]{\bfseries\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+} 
+
+\makeatletter
+\def\@textbottom{\vskip \z@ \@plus 1pt}
+\let\@texttop\relax
+\makeatother
+
+\makeatletter
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else%
+  \hbox{}%
+  \thispagestyle{empty}%
+  \newpage%
+  \if@twocolumn\hbox{}\newpage\fi\fi\fi}
+
+\makeatother
+
+
+
+
+
+\usepackage{amsthm}
+\usepackage{amssymb,amsmath,bbm}
+\usepackage{array}
+\usepackage{bm}
+\usepackage{multirow}
+\usepackage[footnote]{acronym}
+
+\usepackage[bottom]{footmisc}
+
+\newtheoremstyle{break}
+  {11pt}{11pt}%
+  {\itshape}{}%
+  {\bfseries}{}%
+  {\newline}{}%
+\theoremstyle{break}
+
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{remark}{Remark}[chapter]
+\newtheorem{property}{Property}[chapter]
+\newtheorem{example}{Example}[chapter]
+
+\usepackage{makecell}
+\renewcommand\theadalign{bl}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\cellalign{bl}
+\renewcommand\cellgape{\Gape[2pt]}
+
+\parskip=5pt
+
+\usepackage{xcolor}
+\definecolor{quotemark}{gray}{0.7}
+\makeatletter
+\def\fquote{%
+    \@ifnextchar[{\fquote@i}{\fquote@i[]}%]
+           }%
+\def\fquote@i[#1]{%
+    \def\tempa{#1}%
+    \@ifnextchar[{\fquote@ii}{\fquote@ii[]}%]
+                 }%
+\def\fquote@ii[#1]{%
+    \def\tempb{#1}%
+    \@ifnextchar[{\fquote@iii}{\fquote@iii[]}%]
+                      }%
+\def\fquote@iii[#1]{%
+    \def\tempc{#1}%
+    \vspace{1em}%
+    \noindent%
+    \begin{list}{}{%
+         \setlength{\leftmargin}{0.1\textwidth}%
+         \setlength{\rightmargin}{0.1\textwidth}%
+                  }%
+         \item[]%
+         \begin{picture}(0,0)%
+         \put(-15,-5){\makebox(0,0){\scalebox{3}{\textcolor{quotemark}{``}}}}%
+         \end{picture}%
+         \begingroup\itshape}%
+
+\def\endfquote{%
+ \endgroup\par%
+ \makebox[0pt][l]{%
+ \hspace{0.8\textwidth}%
+ \begin{picture}(0,0)(0,0)%
+ \put(15,15){\makebox(0,0){%
+ \scalebox{3}{\color{quotemark}''}}}%
+ \end{picture}}%
+ \ifx\tempa\empty%
+ \else%
+    \ifx\tempc\empty%
+       \hfill\rule{100pt}{0.5pt}\\\mbox{}\hfill\tempa,\ \emph{\tempb}%
+   \else%
+       \hfill\rule{100pt}{0.5pt}\\\mbox{}\hfill\tempa,\ \emph{\tempb},\ \tempc%
+   \fi%
+ \fi%
+ \par%
+ \vspace{0.5em}%
+}
+\makeatother
+
+\usepackage{afterpage}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+    
+\setmainlanguage{english}
+\setotherlanguage{arabic}
+\newfontfamily\arabicfont[Script=Arabic,Scale=1.3]{Amiri}
+% Removed "Scheherazade" font as it is not installed
+\newcommand{\mychapter}[1]{  
+    \chapter*{#1}
+}
+
+\usepackage[page,toc,titletoc,title]{appendix}
+
+\addto\captionsenglish{%
+  \renewcommand\appendixname{Appendix}
+  \renewcommand\appendixpagename{Appendices}
+  \renewcommand{\appendixtocname}{Appendices}
+}
+\usepackage{etoolbox}
+\appto\appendix{\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}}
+
+\appto\listoffigures{\addtocontents{lof}{\protect\setcounter{tocdepth}{1}}}
+\appto\listoftables{\addtocontents{lot}{\protect\setcounter{tocdepth}{1}}}
+\appto\listofalgorithms{\addtocontents{loa}{\protect\setcounter{tocdepth}{1}}}
+
+
+\begin{document}
+
+\pagenumbering{Roman}
+
+
+\renewcommand{\cftpartleader}{\cftdotfill{\cftdotsep}} 
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} 
+% -------------------------------
+% Front Matter
+% -------------------------------
+\include{Abstract}
+\clearpage
+\include{Dedications}
+\clearpage
+\include{Acknowledgement}
+\clearpage
+\tableofcontents
+\clearpage
+\listoffigures
+\clearpage
+\listoftables
+\clearpage
+\include{Acronyms}
+
+\cleardoublepage
+
+\pagenumbering{arabic}
+\setcounter{chapter}{0}  %Set chapter counter to 1
+\include{intro}
+\include{chapter1}
+\include{chapter2}
+\include{chapter3}
+\include{chapter4}
+\include{conclusion}
+
+\newrefcontext[sorting=none]
+\printbibliography[nottype=misc,title={Bibliography}]
+\newrefcontext[sorting=none]
+\printbibliography[type=misc,title={Webography}]
+
+\clearpage
+\thispagestyle{empty}
+
+\end{document}

@@ -1,0 +1,420 @@
+\chapter{Background Concepts}
+
+\label{ch:chap1}
+
+\section{Introduction}
+Neurodegenerative disorders are caused by the progressive degeneration of cells and nervous system interconnections that are necessary for motion, balance, strength, sensation, and cognition. Multiple Sclerosis (MS) is a chronic and debilitating neurodegenerative condition that affects millions of individuals worldwide. It is characterized by demyelination and neuroinflammation within the central nervous system (CNS), which can result in motor dysfunction, sensory disturbances, and cognitive impairments. In this chapter, we present the medical and computer science foundations underpinning our proposed approach. The first section discusses the clinical and biological concepts of MS, while the second elaborates on the computational tools and artificial intelligence (AI) techniques relevant to MS detection and analysis.
+
+\section{Medical Concepts}
+\subsection{Multiple Sclerosis (MS)}
+MS is a chronic inflammatory disorder of the CNS that primarily affects the brain and spinal cord. It results from an abnormal immune response targeting myelin, the protective sheath surrounding nerve fibers, leading to disrupted neural communication \cite{turn0search5}. The disease manifests through episodes of demyelination followed by periods of remission, although it can progressively worsen over time. The exact etiology of MS remains unclear, but it is believed to involve a combination of genetic, environmental, and immunological factors \cite{turn0search2}. Figure~\ref{fig:ms_neuropathology} illustrates the key pathological process comparing healthy myelinated nerves to MS-affected fibers.
+
+At a cellular level, MS is characterized by the infiltration of autoreactive T cells into the CNS, triggering an inflammatory cascade that leads to myelin destruction and axonal damage \cite{turn0search8}. This process is accompanied by gliosis and the formation of sclerotic plaques, which are hallmarks of MS observed in neuroimaging. Furthermore, recent research highlights the role of B cells in MS pathogenesis, emphasizing their contribution to antibody-mediated responses and cytokine secretion \cite{turn0search17}.
+
+Despite significant progress in understanding MS, it remains a highly heterogeneous disease with varying clinical presentations and progression patterns. The complexity of MS necessitates a multimodal approach for accurate diagnosis, incorporating neuroimaging, cerebrospinal fluid (CSF) biomarkers, and clinical evaluation \cite{Teunissen2009}.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.6\textwidth]{images/ms.png}
+\caption{
+Neuropathological changes in MS \cite{genetech}.
+}
+\label{fig:ms_neuropathology}
+\end{figure}
+
+
+
+\subsection{Causes and Symptoms}  
+MS arises from a complex interplay of genetic susceptibility and environmental triggers, leading to immune-mediated damage in the central nervous system. Genome-wide association studies (GWAS) have identified over 200 genetic variants linked to MS, particularly within the \textit{HLA-DRB1} locus of the major histocompatibility complex (MHC) \cite{InternationalMSConsortium2019}. Individuals with a family history of MS have a higher risk, though heritability remains moderate compared to other autoimmune diseases \cite{Sawcer2011}. Environmental factors also play a significant role; low vitamin D levels have been associated with increased susceptibility to MS due to their impact on immune regulation \cite{Ascherio2014}. Epstein-Barr virus (EBV) infection is strongly correlated with MS onset, with recent studies suggesting it as a necessary trigger. Additionally, smoking has been linked to both increased MS risk and greater disease severity \cite{Hedstrom2013}. Geographic patterns indicate a higher prevalence in regions farther from the equator, suggesting an influence of sunlight exposure and vitamin D metabolism \cite{Simpson2019}. 
+
+The early symptoms of MS vary but often include optic neuritis, presenting as blurred vision and pain with eye movement \cite{Toosy2014}, sensory disturbances such as numbness and tingling \cite{Oreja-Guevara2012}, and profound fatigue \cite{Krupp2010}. Motor symptoms like limb weakness and spasticity are also common, affecting mobility \cite{Rizzo2016}. A characteristic sign of MS is Lhermitte's phenomenon, described as an electric shock-like sensation traveling down the spine upon neck flexion, indicating cervical spinal cord involvement \cite{Al-Araji2005}.
+
+\subsection{Stages of Multiple Sclerosis}
+Multiple Sclerosis (MS) progresses through distinct clinical subtypes, each exhibiting unique patterns of disease activity and disability accumulation (Figure~\ref{fig:ms_courses}). Understanding these stages is crucial for prognosis and treatment strategies \cite{Lublin2014}.
+
+\subsubsection{Clinically Isolated Syndrome (CIS)}
+Clinically Isolated Syndrome (CIS) represents the first neurological episode suggestive of MS, lasting at least 24 hours. The diagnosis requires both clinical evidence of CNS demyelination and MRI findings consistent with MS, typically demonstrating two or more characteristic lesions.
+Approximately 60-80\% of patients with CIS will develop clinically definite MS within two decades, with the risk significantly increased by the presence of gadolinium-enhancing lesions on MRI. 
+Current evidence supports the use of disease-modifying therapies in high-risk CIS patients to delay conversion to MS \cite{Miller2012}.
+
+\subsubsection{Relapsing-Remitting MS (RRMS)}
+RRMS is the most common form, affecting approximately 85\% of MS patients at diagnosis.
+It is characterized by episodic relapses—new or worsening neurological symptoms—followed by periods of partial or complete remission. MRI findings typically show inflammatory demyelinating lesions, with gadolinium-enhancing areas indicating active disease \cite{Filippi2016}. 
+
+\subsubsection{Secondary Progressive MS (SPMS)}
+SPMS usually develops after a period of RRMS, with a transition marked by gradual worsening of neurological function, independent of discrete relapses. This stage is associated with increased neurodegeneration, brain atrophy, and axonal loss, which contribute to accumulating disability over time.
+While inflammation persists, it plays a reduced role compared to earlier stages \cite{Mahad2015}.
+
+\subsubsection{Primary Progressive MS (PPMS)}
+PPMS accounts for about 10–15\% of cases and is characterized by continuous symptom progression from onset, without clear relapses or remissions \cite{Montalban2017}. 
+Unlike RRMS, PPMS exhibits fewer inflammatory lesions but greater spinal cord involvement, leading to significant motor impairment. Patients with PPMS often experience a more aggressive disability trajectory, with fewer treatment options available, though recent therapies targeting B cells have shown promise \cite{Hauser2017}.
+
+These MS subtypes highlight the complexity of disease progression, emphasizing the need for personalized treatment approaches and continued research into disease-modifying therapies.
+
+\newpage
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\textwidth , height=200pt]{images/subtype.png}
+\caption{
+Multiple sclerosis subtypes \cite{Hauser2017}..
+}
+\label{fig:ms_courses}
+\end{figure}
+
+
+
+
+
+\subsection{MS Detection Methods}
+Accurate diagnosis of Multiple Sclerosis (MS) relies on a combination of clinical evaluation, magnetic resonance imaging (MRI), cerebrospinal fluid (CSF) analysis, and established diagnostic criteria.
+
+\subsubsection{MRI in MS Detection}
+Magnetic Resonance Imaging (MRI) is the gold standard imaging technique for diagnosing and monitoring Multiple Sclerosis (MS)~\cite{Filippi2019, Thompson2018}. Its importance stems from several key advantages:
+
+\begin{itemize}
+    \item \textbf{Early and Accurate Diagnosis:} MRI can detect MS lesions in the brain and spinal cord even before clinical symptoms appear, allowing for earlier diagnosis and intervention~\cite{Thompson2018}.
+    \item \textbf{Objective Visualization of Lesions:} MRI provides high-resolution, detailed images that reveal the size, number, and location of demyelinating lesions, particularly in regions characteristic for MS such as periventricular, juxtacortical, infratentorial, and spinal cord areas~\cite{Geurts2012}.
+    \item \textbf{Assessment of Disease Activity:} By comparing new scans with previous ones, clinicians can identify new or enlarging lesions and differentiate between active (gadolinium-enhancing) and chronic lesions. This helps guide treatment decisions and monitor therapeutic response~\cite{Filippi2019}.
+    \item \textbf{Support for Diagnostic Criteria:} The McDonald criteria for MS diagnosis rely heavily on MRI to demonstrate both dissemination in space (multiple regions affected) and dissemination in time (lesions appearing at different times), increasing diagnostic confidence and reducing the need for invasive procedures~\cite{Thompson2018}.
+    \item \textbf{Research and Innovation:} MRI data are essential for computational analysis, including automated lesion detection and segmentation, and serve as a foundation for artificial intelligence applications in MS research~\cite{Ronneberger2015, wahlig2023}.
+\end{itemize}
+
+
+\begin{enumerate}
+\item \textbf{MRI Sequences in MS}
+MRI scans are acquired using different imaging sequences, each optimized to highlight specific tissue characteristics. The most commonly used sequences in MS detection include:
+
+\begin{itemize}
+    \item \textbf{T1-weighted (T1-w) images}: Provide high-resolution anatomical details. When combined with gadolinium contrast agents, T1-w scans help detect active lesions by identifying areas with a compromised blood-brain barrier \cite{turn0search12}.
+    
+    \item \textbf{T2-weighted (T2-w) images}: Sensitive to water content and inflammation, these images are effective in detecting the total burden of MS lesions. Hyperintense regions on T2-w images typically correspond to demyelinated plaques \cite{Tallantyre2019}.
+    
+    \item \textbf{Fluid-Attenuated Inversion Recovery (FLAIR)}: Suppresses cerebrospinal fluid (CSF) signals, enhancing the visibility of periventricular and juxtacortical lesions that are characteristic of MS \cite{Geurts2012}.
+    
+    \item \textbf{Advanced MRI Techniques}: These include diffusion tensor imaging (DTI), magnetization transfer imaging (MTI), and susceptibility-weighted imaging (SWI), which provide insights into microstructural damage and chronic lesions \cite{Sastre-Garriga2018, Absinta2019}.
+\end{itemize}
+
+\item \textbf{2D vs. 3D MRI in MS}
+MRI data can be acquired as either two-dimensional (2D) slices or three-dimensional (3D) volumes. \textbf{3D MRI has gained prominence in MS research} due to its isotropic resolution and suitability for AI-based segmentation tasks (e.g., 3D U-Net models) \cite{wahlig2023, Ronneberger2015}. Spinal cord imaging, though technically challenging, is critical for comprehensive MS assessment \cite{Kearney2015}.
+
+The characteristic distribution of lesions—periventricular, juxtacortical, infratentorial, and spinal cord—is a key diagnostic criterion in MS, as outlined by the McDonald criteria \cite{Thompson2018}.
+    
+\end{enumerate}
+
+
+
+The ability of MRI to combine sensitivity, specificity, and detailed visualization of MS pathology makes it indispensable in clinical practice and research.
+
+
+\subsubsection{CT Imaging in MS Detection}
+Computed Tomography (CT) is not a primary imaging modality for diagnosing multiple sclerosis (MS) due to its limited sensitivity for detecting white matter lesions and inferior soft tissue contrast compared to MRI. However, CT can play a supplementary role in specific scenarios, such as detecting gross structural changes like brain atrophy in progressive MS or ruling out alternative diagnoses (e.g., brain tumors, acute stroke, or hemorrhage) when MRI is unavailable or contraindicated\cite{wattjes2021magnims}. For instance, CT may identify cortical atrophy, which correlates with disability progression in advanced MS cases, though it lacks the resolution to visualize early demyelinating lesions\cite{kaunzner2020mri}. Recent consensus guidelines and neuroimaging reviews emphasize MRI as the gold standard and do not recommend CT for routine MS diagnosis or monitoring, limiting its use to acute or resource-constrained settings\cite{wattjes2021magnims,kaunzner2020mri}.
+
+\subsubsection{CSF Biomarkers in Multiple Sclerosis}
+Cerebrospinal fluid (CSF) analysis is an important diagnostic tool for multiple sclerosis (MS) as it detects inflammation and nerve damage in the central nervous system. The main CSF biomarkers are:
+
+\begin{itemize}
+    \item \textbf{Oligoclonal Bands (OCBs):} OCBs are present in the vast majority of MS patients and strongly support the diagnosis when combined with MRI findings, though they are not unique to MS~\cite{Teunissen2009}.
+    \item \textbf{Neurofilament Light Chain (NfL):} Higher CSF NfL levels indicate nerve fiber damage and correlate with disease activity and progression~\cite{Khalil2021}.
+    \item \textbf{Emerging Biomarkers:} Additional biomarkers such as chitinase-3-like-1 (CHI3L1) and glial fibrillary acidic protein (GFAP) are under investigation for their potential to track MS subtypes and progression.
+\end{itemize}
+
+\subsubsection{Clinical History and Diagnostic Criteria}
+Diagnosing MS combines clinical assessment, neurological examination, and paraclinical tests. The McDonald criteria~\cite{Thompson2018} are widely used and focus on:
+
+\begin{itemize}
+    \item \textbf{Dissemination in space:} Lesions in different regions of the central nervous system, identified by MRI.
+    \item \textbf{Dissemination in time:} Evidence that lesions have developed at different points in time, shown on MRI or by new clinical symptoms. OCBs can substitute for this in some cases.
+\end{itemize}
+
+Early symptoms that may suggest MS include vision problems (optic neuritis), abnormal sensations (numbness, tingling), muscle weakness or stiffness, and occasionally balance or double vision~\cite{Toosy2014, Rizzo2016}.
+
+It is essential to rule out other conditions that can mimic MS, such as neuromyelitis optica, vitamin B12 deficiency, and certain infections~\cite{Wingerchuk2015}.
+
+
+\subsection{Limitations of MS Detection Methods}
+Despite advancements, current MS diagnostic methods have inherent limitations. MRI findings, though crucial for diagnosis, are not exclusive to MS, as similar lesions can appear in conditions like neuromyelitis optica spectrum disorders and small vessel ischemic disease, leading to potential misdiagnosis \cite{Wingerchuk2015}. Additionally, MRI may not detect early microscopic changes, necessitating complementary diagnostic tools \cite{Geurts2012}.
+
+Similarly, CT scans are limited by their low sensitivity for MS-specific lesions and the use of ionizing radiation, restricting their application to specific diagnostic scenarios~\cite{wattjes2021magnims}.
+
+CSF biomarkers, such as oligoclonal bands (OCBs) and neurofilament light chain (NfL), while useful, lack disease specificity, as they can also be elevated in other neurological disorders \cite{Deisenhammer2019, Khalil2021}. Clinical diagnosis based on the McDonald criteria, though widely adopted, may produce false positives, particularly when MRI findings are nonspecific or when early MS symptoms overlap with other neurological conditions \cite{Solomon2016, Brownlee2019}.
+
+These limitations highlight the need for more integrative and intelligent diagnostic solutions. The complexity of MS—ranging from its clinical heterogeneity to its subtle radiological signatures—requires systems capable of synthesizing diverse data types. Artificial Intelligence (AI), particularly when applied in multimodal frameworks, holds the potential to overcome many of these diagnostic shortcomings. By combining imaging, clinical, and biological information, AI-powered models can enhance diagnostic precision, uncover latent patterns, and support early intervention.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\section{Computer Science Concepts}
+Computer science plays a central role in advancing Multiple Sclerosis (MS) research by applying artificial intelligence to analyze MRI scans, clinical records, and CSF biomarkers. Through preprocessing, feature extraction, data integration, and explainable AI, these methods support accurate diagnosis and better understanding of disease progression.
+
+\subsection{Data Preprocessing}
+
+\subsubsection{Medical Image Preprocessing}
+Medical image preprocessing is a set of techniques to standardize MRI scans by removing artifacts and enhancing key features for accurate multiple sclerosis (MS) analysis. It ensures clear visualization of brain structures, such as lesions, by correcting noise and distortions. This enables consistent image comparison across patients and timepoints, forming a critical foundation for MS research and diagnosis \cite{BenDhifallah2024}.
+
+
+\begin{enumerate}
+\item \textbf{Bias Field Correction : }\\
+MRI scans may have smooth intensity variations caused by magnetic field imperfections. This effect, called a bias field, makes similar tissues look different in brightness. Bias field correction solves this problem and makes the image clearer and more uniform. The most commonly used method is N4ITK, which improves tissue visibility and supports better model performance \cite{tustison2010n4itk}.
+\newpage
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth, height=4.4cm]{images/bias.png}
+    \caption{Raw MRI image (left) with visible bias field; corrected image (right) using N4ITK \cite{bias}.}
+    \label{fig:bias_correction}
+\end{figure}
+
+
+\item \textbf{Skull Stripping : }\\
+Skull stripping is the process of removing non-brain parts such as the skull and scalp from MRI images. This step helps focus only on the brain regions, especially white matter where MS lesions usually appear. It also makes the processing faster and more accurate. Tools like BET (Brain Extraction Tool) or ROBEX are commonly used for this task \cite{smith2002fast}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth, height=4.4cm]{images/skull.png}
+    \caption{Skull-stripping steps in MRI preprocessing: (A) Original input image, (B) Brain tissue contouring, and (C) Removal of non-brain tissues \cite{skull}.}
+    \label{fig:skull}
+\end{figure}
+
+
+\item \textbf{Resampling : }\\
+MRI scans from different machines may have different resolutions. Resampling adjusts all images to the same voxel size (e.g., 1×1×1 mm³). This helps ensure that models analyze images in a consistent way, especially when combining data from different hospitals or studies \cite{shinohara2021impact}.
+
+
+\item \textbf{Denoising : }\\
+MRI scans often contain noise due to scanner limitations or patient movement. Denoising techniques help reduce this noise while preserving important features like edges and lesions. One popular method is the Non-Local Means (NLM) filter, which smooths the image by comparing patches with similar intensity patterns \cite{manjon2010adaptive}. Figure \ref{fig:denoising_results} illustrates the impact of denoising, comparing a raw MRI scan with its processed counterpart.
+\newpage
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.5\textwidth, height=8.5cm]{images/denoising.png}
+  \caption{Denoising results: (Top) Original noisy MRI, (Bottom) Denoised output \cite{manjon2010adaptive}.}
+  \label{fig:denoising_results}
+\end{figure}
+
+\item \textbf{Intensity Normalization : }\\
+MRI brightness variations caused by scanner differences are standardized through intensity normalization, ensuring biologically relevant contrasts \cite{ghazvanchahi2023effect}.Figure \ref{fig:intensity_norm} shows the transformation from raw to normalized images using histogram alignment. Methods like IAMLAB and WhiteStripe excel at preserving FLAIR pathology while removing technical variability \cite{normal}.
+ 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth, height=9cm]{images/normal.png}
+  \caption{Intensity normalization stages: Reference (top), input, histogram-matched, and WhiteStripe-normalized results \cite{normal}.}
+  \label{fig:intensity_norm}
+\end{figure}
+
+
+\end{enumerate}
+
+\subsubsection{Text and Clinical Data Preprocessing}
+Preprocessing of clinical data involves preparing structured data (e.g., clinical history, biomarkers) and unstructured data (e.g., clinical notes) for multiple sclerosis (MS) research. This ensures data quality and compatibility with computational models, addressing irregularities to enable insights into disease progression. Examples include clinical history (age, sex, EDSS) and cerebrospinal fluid (CSF) biomarkers (neurofilament light chain (NfL), oligoclonal bands (OCB)) \cite{ismail2024}.
+\begin{enumerate}
+\item \textbf{Data Cleansing : }\
+Data cleansing corrects errors, removes duplicates, resolves inconsistencies, and handles missing values. For structured data, such as clinical history or biomarkers, this may involve imputing missing entries (e.g., EDSS scores or NfL levels).
+
+\item \textbf{Normalization of Clinical Variables : }\
+Normalization adjusts numerical data to a common scale (e.g., [0,1]) to prevent variables with larger ranges from dominating analyses. This applies to data like age, clinical scores (e.g., EDSS), or biomarker levels (e.g., NfL), ensuring equitable contribution and improving model performance in MS research.
+
+\item \textbf{Categorical Variable Encoding : }\
+Categorical variables (e.g., sex, OCB status) are converted into a numerical format suitable for machine learning models. Common techniques include label encoding (assigning an integer to each category) or one-hot encoding (creating binary columns for each category).
+\end{enumerate}
+
+
+\subsection{Artificial Intelligence}
+
+Artificial Intelligence (AI) is a core area of computer science focused on creating systems capable of performing tasks that typically require human intelligence. These tasks include reasoning, learning, problem-solving, perception, and natural language understanding. Within the landscape of computer science, AI provides the theoretical and algorithmic foundation for a wide array of applications, ranging from data analysis to autonomous systems. In the context of healthcare and beyond, AI serves as a powerful tool for extracting insights from complex, high-dimensional datasets, enabling data-driven decision support across domains \cite{RussellNorvig2021, JordanMitchell2015}.
+\newpage
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth, height=7cm]{images/ai.png} % Replace with the actual file path
+    \caption{Hierarchical overview of Artificial Intelligence techniques in Medical Diagnosis.}
+    \label{fig:ai_hierarchy}
+\end{figure}
+
+\subsubsection{Machine Learning (ML)}
+Machine learning (ML), a core subfield of AI, develops algorithms capable of learning from data without being explicitly programmed. It is particularly effective in modeling structured clinical data such as patient demographics, lab values, and diagnostic scores. Common ML models include Support Vector Machines (SVMs), Random Forests, and Multi-Layer Perceptrons (MLPs), all of which are used for pattern recognition, anomaly detection, and classification tasks~\cite{anitha2024}. ML approaches include:
+
+\begin{itemize}
+    \item \textbf{Supervised Learning:} Models are trained using labeled data (e.g., images tagged with diagnoses), enabling tasks such as disease detection or treatment outcome prediction.
+    \item \textbf{Unsupervised Learning:} Patterns are extracted from unlabeled data through techniques like clustering, useful for discovering hidden subgroups or phenotypes in a patient population.
+    \item \textbf{Semi-Supervised Learning:} Combines a small set of labeled data with a larger pool of unlabeled data to improve model generalization when annotations are scarce.
+    \item \textbf{Reinforcement Learning:} Uses trial-and-error strategies to make sequential decisions, optimizing processes such as treatment planning or adaptive diagnostics.
+\end{itemize}
+
+\subsubsection{Artificial Neural Networks (ANNs)}
+Artificial Neural Networks (ANNs) are computational models inspired by biological neural networks, consisting of interconnected processing units called neurons. As shown in Figure \ref{fig:ann_architecture}, a typical ANN architecture includes:
+
+\begin{itemize}
+\item An \textbf{input layer} that receives raw data
+\item One or more \textbf{hidden layers} that transform inputs through learned patterns
+\item An \textbf{output layer} that produces final predictions
+\end{itemize}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\textwidth]{images/ann.png}
+\caption{Architecture of a fully-connected neural network showing input, hidden, and output layers with weighted connections between neurons.}
+\label{fig:ann_architecture}
+\end{figure}
+
+\noindent Each neuron processes information in two stages:
+\begin{enumerate}
+\item Computes a weighted sum: $z = \mathbf{w}^T\mathbf{x} + b$
+\item Applies an activation function: $a = f(z)$
+\end{enumerate}
+
+These activation functions introduce essential non-linearities that enable ANNs to approximate complex functions. Table \ref{tab:activation_functions} summarizes the most common activation functions and their properties:
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{Common Activation Functions in Artificial Neural Networks}
+\label{tab:activation_functions}
+\begin{tabularx}{\textwidth}{|l|>{\centering\arraybackslash}X|X|}
+\hline
+\textbf{Function} & \textbf{Mathematical Formula} & \textbf{Properties and Applications} \\
+\hline
+Sigmoid & $\sigma(x) = \frac{1}{1 + e^{-x}}$ & Range: (0, 1); smooth gradient; suffers from vanishing gradients; used in binary classification output layers. \\
+\hline
+Hyperbolic Tangent (Tanh) & $\tanh(x) = \frac{e^{x} - e^{-x}}{e^{x} + e^{-x}}$ & Range: (-1, 1); zero-centered output; stronger gradients than sigmoid; used in hidden layers. \\
+\hline
+Rectified Linear Unit (ReLU) & $\text{ReLU}(x) = \max(0, x)$ & Range: [0, $\infty$); computationally efficient; avoids vanishing gradient for positive inputs; may cause ``dead neurons''; default choice for hidden layers. \\
+\hline
+Leaky ReLU & $\text{LReLU}(x) = \begin{cases} x, & x \geq 0 \\ 0.01x, & x < 0 \end{cases}$ & Range: ($-\infty$, $\infty$); prevents dead neurons; small negative slope (typically $\alpha=0.01$); used when ReLU causes too many inactive neurons. \\
+\hline
+Softmax & $\text{Softmax}(x_i) = \frac{e^{x_i}}{\sum_{j=1}^n e^{x_j}}$ & Outputs probability distribution (sums to 1); used exclusively in output layers; for multi-class classification; generalization of sigmoid for multiple classes. \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsubsection{Deep Learning (DL)}
+Deep Learning (DL) is an advanced branch of ML that uses multi-layered neural networks to learn hierarchical representations of data. DL is especially effective in analyzing large-scale, high-dimensional inputs such as radiological images, histopathology slides, or textual clinical notes. By automatically learning features through its layered architecture, DL enables nuanced data interpretation without the need for manual feature engineering~\cite{zhang2023}.
+
+\subsubsection{Convolutional Neural Networks (CNNs)}
+CNNs are designed to process grid-like data such as images. Their architecture is composed of several distinct layers that operate in sequence to extract and process features from input data \cite{Krizhevsky2017}:
+
+\begin{itemize}
+    \item \textbf{Convolutional Layer:} Applies a set of learnable filters (kernels) to the input, producing feature maps that capture spatial hierarchies.
+    \item \textbf{Activation Layer:} Introduces non-linearity into the model, typically using the ReLU (Rectified Linear Unit) function.
+    \item \textbf{Pooling Layer:} Reduces the spatial dimensions of the feature maps, retaining the most important information and providing translation invariance (commonly max pooling or average pooling).
+    \item \textbf{Fully Connected (FC) Layer:} Each neuron in this layer is connected to all neurons in the previous layer. FC layers are generally used at the end of the network to perform classification based on the extracted features.
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=14cm]{images/cnn.png}
+    \caption{Typical architecture of a Convolutional Neural Network (CNN) showing convolution, activation, pooling, and fully connected layers\cite{cnn}.}
+    \label{fig:cnn_architecture}
+\end{figure}
+
+\subsubsection{DenseNet}
+DenseNet architectures feature dense connections between layers, meaning each layer receives inputs from all preceding layers. This connectivity pattern improves information and gradient flow throughout the network, which can lead to more accurate and efficient models \cite{Huang2017}.
+\begin{itemize}
+
+ \item \textbf{Dense Connectivity Principle : }\\
+In DenseNet, each layer receives inputs from all preceding layers, allowing efficient information flow, better gradient propagation, and extensive feature reuse.
+
+ \item \textbf{Dense Block and Transition Layers : }\\
+A dense block is a group of layers with this dense connectivity. Transition layers, placed between dense blocks, use batch normalization, 1 convolutions, and 2 pooling to reduce feature map size and control model complexity.
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=10cm, height = 7cm]{images/dense.png}
+\caption{DenseNet block illustration: each layer receives input from all previous layers, followed by a transition layer \cite{dense}.}    \label{fig:densenet_architecture}
+\end{figure}
+
+
+\subsubsection{U-Net}
+U-Net is a convolutional network architecture for fast and precise image segmentation, especially in biomedical imaging \cite{Ronneberger2015}.
+\begin{itemize}
+
+ \item \textbf{Encoder-Decoder Structure : }\\
+U-Net consists of two paths:
+\begin{itemize}
+    \item \textbf{Encoder (Contracting path):} This path captures context in the image through repeated application of convolutional and pooling layers, progressively reducing the spatial dimensions while increasing feature depth.
+    \item \textbf{Decoder (Expanding path):} This path performs upsampling and convolution to reconstruct the spatial dimensions, enabling precise localization of features.
+\end{itemize}
+
+ \item \textbf{Skip Connections : }\\
+Skip connections directly link corresponding layers in the encoder and decoder paths. These connections concatenate feature maps from the encoder to the decoder, preserving spatial information lost during downsampling and aiding in more accurate segmentation.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=12cm, height = 7cm]{images/unet.png}
+\caption{U-Net architecture: encoder-decoder structure with skip connections, showing convolution, pooling, up-convolution, and output segmentation map \cite{Ronneberger2015}.}
+\label{fig:unet_architecture}
+\end{figure}
+\end{itemize}
+
+\subsubsection{ResNet34}
+ResNet34 is a residual neural network architecture composed of 34 layers, designed to mitigate the vanishing gradient problem through the use of residual connections. These skip connections allow the network to learn identity mappings, improving gradient flow and enabling the training of deeper networks \cite{He2016}.
+
+\begin{itemize}
+
+ \item \textbf{Residual Connections:} \\
+In ResNet34, each residual block adds the input of the block to its output via a shortcut connection. This facilitates learning of residual functions rather than direct mappings, improving convergence and overall performance.
+
+ \item \textbf{Residual Blocks and Downsampling:} \\
+A residual block typically contains two or three convolutional layers with batch normalization and ReLU activations. Downsampling is performed using convolutional layers with stride 2 at certain blocks, reducing feature map size while increasing receptive field.
+
+\end{itemize}
+
+\subsubsection{Multi-Layer Perceptron (MLP)}
+A Multi-Layer Perceptron (MLP) is a basic form of ANN where data moves unidirectionally from input to output through one or more hidden layers. MLPs are primarily used for tasks involving structured data, such as patient records, sensor readings, or tabulated test results. Their ability to model complex, non-linear relationships makes them suitable for classification and regression tasks in clinical decision support~\cite{ismail2024}.
+
+\subsubsection{Long Short-Term Memory Networks (LSTM)}
+Long Short-Term Memory (LSTM) networks are a type of recurrent neural network (RNN) capable of learning long-term dependencies in sequential data. They are especially useful in analyzing time-series health data such as vital sign trends, symptom progression, or treatment response over time. LSTMs maintain internal memory states, allowing them to make informed predictions based on historical input sequences~\cite{zhang2023}.
+
+
+\subsection{Data Integration}
+Data integration is a comprehensive process in MS research that involves combining multiple types of data—such as MRI scans, CSF biomarkers, and clinical records—into a single, cohesive representation to enhance the overall analysis of the disease. This approach recognizes the complementary nature of different data sources, each providing unique perspectives on MS, and seeks to unify them to create a more complete picture of the condition \cite{zhang2023}.
+
+\begin{itemize}
+    \item \textbf{Feature Alignment:} \\
+    Feature alignment is the initial step in data integration, where features extracted from various data sources are adjusted to ensure they share a consistent dimensionality and semantic meaning. This harmonization allows for a unified analysis by aligning the diverse characteristics of MS data, such as imaging features and clinical measurements, into a compatible format.
+    \item \textbf{Attention-Based Fusion:}\\
+    Attention-based fusion is a dynamic technique within data integration that assigns varying levels of importance to different data types based on their relevance to the analysis. This method enables the system to focus on the most pertinent information—such as imaging data for lesion detection or clinical data for assessing progression—ensuring a balanced and context-sensitive integration process.
+    \item \textbf{Fused Representation:} \\
+    Fused representation is the resulting unified data structure that encapsulates the integrated features from multiple sources, serving as a foundation for further analytical tasks. This combined representation provides a holistic view of MS, consolidating the strengths of each data type to support comprehensive diagnostic or research efforts.
+\end{itemize}
+
+
+
+\subsection{Explainable Artificial Intelligence (XAI)}
+Explainable Artificial Intelligence (XAI) aims to make the decision-making processes of complex models transparent and understandable, which is crucial in MS research where diagnostic accuracy and trust are essential. By clarifying how predictions are generated, XAI addresses the "black box" problem of advanced models, ensuring their outputs can be interpreted and validated by clinicians and researchers~\cite{nicolaou2023}. The main types of XAI methods commonly used in medical AI are summarized in Table~\ref{tab:xai_types}.
+
+\subsubsection{Attention-Based Explanation}
+Attention-based explanation uses attention mechanisms to highlight the relative contribution of different input elements to a model’s output. In MS research, this approach can reveal which imaging features or clinical observations most influence a prediction, offering visual or quantitative insights that support clinical decision-making~\cite{cruciani2021}.
+
+\subsubsection{Natural Language Explanation}
+Natural language explanation generates human-readable descriptions from model outputs, often using generative language models. In MS research, this technique can provide textual summaries, such as indicating that a prediction relies on specific imaging patterns, making the model’s reasoning accessible to clinicians and supporting the integration of AI tools into practice~\cite{nicolaou2023}.
+
+\begin{table}[h]
+    \centering
+        \caption{Common types of XAI methods and their applications in medical AI.}
+
+\begin{tabularx}{\textwidth}{|l|>{\centering\arraybackslash}X|X|}
+        \hline
+        \textbf{Method}            & \textbf{Description}                                             & \textbf{Example Usage} \\
+        \hline
+        Attention-Based            & Highlights important features/modalities                         & Which input influenced the prediction most \\
+            \hline
+        Saliency/Grad-CAM          & Visual heatmap over input features (e.g., MRI regions)           & Shows relevant image regions \\
+            \hline
+        Feature Importance         & Quantifies contribution of each feature                          & Ranks clinical variables by influence \\
+            \hline
+        Natural Language           & Generates textual explanation                                    & Summarizes reasoning in plain language \\
+            \hline
+        Post-hoc (LIME, SHAP)      & Model-agnostic local explanations                                & Explains individual predictions \\
+        \hline
+    \end{tabularx}
+    \label{tab:xai_types}
+\end{table}
+
+
+
+
+
+
+
+\section{Conclusion}
+
+This chapter has established a solid foundation by defining key computer science concepts essential for MS research, including preprocessing, AI architectures, data integration, and explainability. These concepts provide a broad understanding of computational tools that support MS analysis, setting the stage for deeper exploration in subsequent chapters. This groundwork will guide the development of tailored methodologies to advance MS diagnosis and treatment strategies.
+

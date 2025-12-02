@@ -1,0 +1,20 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'main.blg'
+[159] biber:340> INFO - === Tue Dec  2, 2025, 06:05:08
+[256] Biber.pm:419> INFO - Reading 'main.bcf'
+[395] Biber.pm:979> INFO - Found 84 citekeys in bib section 0
+[418] Biber.pm:4419> INFO - Processing section 0
+[446] Biber.pm:4610> INFO - Looking for bibtex file 'references.bib' for section 0
+[454] bibtex.pm:1713> INFO - LaTeX decoding ...
+[662] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[1210] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1211] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1211] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[1211] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[1274] bbl.pm:660> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[1311] bbl.pm:763> INFO - Output to main.bbl
+[1311] Biber.pm:131> WARN - Possible typo (case mismatch) between datasource keys: 'Kim2020' and 'kim2020' in file 'references.bib'
+[1312] Biber.pm:131> WARN - Possible typo (case mismatch) between citation and datasource keys: 'filippi2019' and 'Filippi2019' in file 'references.bib'
+[1312] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_ivyJ/33e59b5ca9ec342068223d604c3f8d55_34320.utf8, line 552, warning: 59 characters of junk seen at toplevel
+[1312] Biber.pm:131> WARN - I didn't find a database entry for 'filippi2019' (section 0)
+[1312] Biber.pm:133> INFO - WARNINGS: 4

@@ -1,0 +1,30 @@
+\chapter*{General Introduction}
+\addcontentsline{toc}{chapter}{General Introduction}
+\markboth{General Introduction}{General Introduction}
+
+Multiple Sclerosis (MS) is a serious, lifelong disease that affects the brain and spinal cord. It is caused by the body's own immune system attacking the protective covering of nerves, leading to inflammation, damage, and a slow loss of nerve function over time \cite{Compston2008, Lassmann2018}. The global impact of MS is large and continues to grow. Recent reports show that more than 2.9 million people around the world were living with MS in 2023 \cite{msif2023}, with about 36 people in every 100,000 being affected \cite{Walton2020}. This disease mainly strikes young adults between 20 and 50 years old. Women are affected nearly three times more often than men \cite{Harbo2013}. In many regions, especially where access to advanced medical care is limited, the burden of MS is even greater, leading to more disability \cite{GBD2019}.
+
+Getting an accurate diagnosis of MS is difficult. The symptoms vary a lot from person to person and can look like other nerve diseases \cite{Thompson2018, Brownlee2017}. Doctors usually follow the McDonald criteria, which combine results from brain scans (MRI), a clinical disability score (EDSS), and a test of spinal fluid (looking for oligoclonal bands) \cite{Thompson2018}. However, in everyday practice, these different pieces of information are often looked at separately. This *isolated approach* misses the full picture of how brain changes, physical disability, and biological markers are connected. It can delay diagnosis and make it harder to predict how the disease will progress. Also, the current method for measuring brain lesions on an MRI—drawing them by hand—is very slow and depends heavily on the expert doing it, leading to inconsistent results \cite{Filippi2019}.
+
+This is where Artificial Intelligence (AI) and Machine Learning can help. By combining different types of data—like MRI images, patient age, disability scores, and lab results—into smart computer models, we can improve how accurately and quickly MS is diagnosed. These models can find patterns that are hard for humans to see. However, a big problem stops these advanced AI tools from being used in hospitals: they often work like a *"black box."* Doctors cannot see or understand how the AI made its decision, which makes it hard for them to trust the result \cite{nabizadeh2022}. For AI to be a helpful tool for neurologists, it must not only be accurate but also be able to *explain* its reasoning in a way that makes sense to a doctor.
+
+This thesis tackles both of these problems—combining different data sources and making AI understandable—by introducing **MSFusionXAI**. This is a new, explainable AI framework built to help detect and analyze Multiple Sclerosis. **MSFusionXAI** is based on three main ideas:
+
+1.  **Accurate Lesion Measurement:** A deep learning model (using a U-Net with a ResNet34 encoder) that automatically finds and outlines MS lesions on MRI scans, giving a precise and consistent measure of disease damage.
+2.  **Smart Data Combination:** A new *adaptive attention* method that decides, for each patient, how much importance to give to the MRI images versus the clinical information (like age, sex, disability score, and spinal fluid results). This mimics how a doctor weighs different pieces of evidence.
+3.  **Clear Explanations:** A system that makes the AI's decision-making clear. It shows which type of data was most important, analyzes how lesion size relates to the diagnosis, and—critically—automatically writes a structured report in plain language using a medical AI (BioBERT), just like a doctor would.
+
+We built and tested this system using real data from the CHU Sahloul University Hospital in Tunisia (46 MS patients and 46 healthy individuals). This work shows how to create a strong and useful AI tool even with the limited data often available in real hospitals. By focusing on explainability from the start, **MSFusionXAI** is designed to be a practical and trustworthy assistant for clinicians.
+
+The main goals of this research are:
+
+\begin{enumerate}
+    \item To build an efficient AI model that can automatically find MS lesions on MRI scans with a high level of accuracy, comparable to other advanced methods.
+    \item To create a new fusion technique that combines MRI and clinical data in a smart way, leading to better accuracy in telling MS patients apart from healthy people than using either type of data alone.
+    \item To build explainability directly into the system, using attention weights, statistical analysis, and automatic report writing, so that doctors can understand and trust the AI's conclusions.
+    \item To thoroughly test the entire **MSFusionXAI** system using a robust method called five-fold cross-validation, proving that it is more accurate and reliable than standard approaches, and showing it can fit into a hospital's workflow.
+\end{enumerate}
+
+This thesis is organized as follows: **Chapter 1** explains the basics of MS and the key AI concepts used in this work. **Chapter 2** reviews recent research on using AI for MS diagnosis, highlighting the gaps that our framework aims to fill. **Chapter 3** describes the **MSFusionXAI** method in detail, from preparing the data to the design of each AI component. **Chapter 4** presents all the experiments and results, including tests of accuracy, speed, and explainability. Finally, **Chapter 5** summarizes what we have achieved, discusses the limitations, and suggests ideas for future improvements and real-world testing in clinics.
+
+In summary, this thesis presents **MSFusionXAI**, a new tool that combines different types of medical data with clear, understandable AI to support the diagnosis of Multiple Sclerosis. By making the AI's reasoning transparent, we aim to build a tool that doctors can use with confidence to help their patients.

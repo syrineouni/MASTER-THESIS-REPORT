@@ -1,0 +1,218 @@
+\chapter{Proposed Method: MSFusionXAI}
+\label{chap:proposed_method}
+
+\section{Introduction}
+\label{sec:intro}
+
+Diagnosing Multiple Sclerosis (MS) requires combining different types of medical data—like brain scans and patient information—to make accurate and trustworthy decisions. This chapter presents MSFusionXAI, a complete AI framework designed to automatically detect MS by intelligently merging MRI scans with clinical data. The system uses an adaptive attention mechanism to decide which type of information is most important for each patient, performs detailed lesion segmentation when needed, and provides clear explanations for every decision it makes, making it suitable for real clinical use.
+
+\section{System Overview}
+\label{sec:system_overview}
+
+Figure \ref{fig:pipeline_overview} shows the complete MSFusionXAI workflow. The system takes two main inputs: FLAIR MRI brain scans and structured clinical data (age, sex, EDSS score, and oligoclonal band status). These inputs are processed through separate pathways to extract their key features. An adaptive attention module then intelligently combines these features, deciding how much weight to give to the MRI versus the clinical data for that specific patient. This combined information is used to classify the subject as either MS or Healthy. A unique conditional logic then decides the next steps: if the patient is classified as Healthy, the process stops with a summary report. If classified as MS, the system automatically activates a lesion segmentation module to measure the brain lesions in detail and generates a comprehensive, explainable report for the clinician.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth, height=250pt]{images/workflow.png}
+\caption{The MSFusionXAI pipeline architecture.}
+\label{fig:pipeline_overview}
+\end{figure}
+\newpage
+\section{Dataset Description}
+\label{sec:dataset}
+
+\subsection{Cohort Composition}
+\label{subsec:cohort}
+
+The study used data from 92 subjects at the CHU Sahloul University Hospital in Tunisia. The cohort was carefully balanced, with 46 patients diagnosed with MS (according to the McDonald criteria) and 46 age- and sex-matched healthy controls. The MS patients had a range of disability levels, measured by the Expanded Disability Status Scale (EDSS) from 0 to 6.5. All participants underwent a standardized brain MRI protocol. This balanced design helps train a fair and accurate AI model.
+
+\section{MRI Preprocessing Pipeline}
+\label{sec:preprocessing}
+
+The quality and consistency of MRI data are paramount for training reliable deep learning models. Raw clinical MRI scans exhibit significant heterogeneity due to variations in scanner hardware, acquisition protocols, and patient physiology. To mitigate these confounding factors and ensure our models learn pathological features rather than technical artifacts, we implemented a standardized seven-stage preprocessing pipeline. All operations were deterministic and executed using established medical imaging libraries (NiBabel, SimpleITK, SciPy). The pipeline transforms each raw 3D FLAIR volume into a standardized, skull-stripped, intensity-normalized, and isotropic volume ready for feature extraction.
+
+\subsection{Orientation Standardization \& Rotation Correction:} MRI volumes from different sources may be stored with inconsistent anatomical orientations (e.g., sagittal vs. axial primary slice). We enforce the canonical neurological orientation (Right-Anterior-Superior, RAS). An automated check analyzes intensity projection profiles of the central axial slice to detect 90-degree rotations. Volumes identified as rotated are corrected using array rotation operations. This ensures consistent spatial alignment across all subjects, a prerequisite for any spatial analysis.
+    
+    \subsection{Bias Field Correction:} Inhomogeneities in the scanner's magnetic field cause smooth, low-frequency intensity variations across an image, known as a bias field. This artifact can obscure tissue boundaries and mimic or hide lesions. We apply a simplified N4ITK-inspired algorithm. A heavily smoothed version of the image is computed via 3D Gaussian filtering ($\sigma = 50$mm), which approximates the bias field. The corrected image is obtained by dividing the original image by this estimated bias field. This dramatically improves intensity uniformity within tissue classes.
+    
+    \subsection{Skull Stripping:} Non-brain tissues (skull, scalp, eyes) have intensity profiles that can interfere with analysis. We isolate the brain parenchyma using a combination of intensity thresholding and morphological operations. First, an initial brain mask is created by thresholding at the 10th percentile of non-zero intensities. This mask is then refined using binary hole-filling, followed by two iterations of erosion to remove spurious connections to the skull, and three iterations of dilation to restore the brain's natural contours. The final mask is applied to the image, zeroing out all extracranial voxels.
+    
+    \subsection{Intensity Normalization:} MRI signal intensity is expressed in arbitrary scanner units. To enable meaningful comparison across subjects, we normalize the intensity range of each brain to a standard [0, 1] interval. We use a robust percentile-based method. For each brain-masked image, we compute the 1st and 99th percentiles of the intensity distribution. These values define the effective intensity range, excluding extreme outliers. Voxel intensities are then linearly scaled and mapped to [0,1]. This preserves the relative contrast between tissues (e.g., grey matter, white matter, lesions) while removing scanner-dependent absolute intensity differences.
+    
+    \subsection{Denoising:} MRI noise, primarily thermal noise from the receiver coil, manifests as high-frequency granularity. We apply mild 3D Gaussian smoothing ($\sigma = 0.5$ mm) to suppress this noise while preserving anatomical edges and lesion boundaries. The small kernel size ensures that small lesions are not blurred out.
+    
+    \subsection{Geometric Resampling:} Scans had variable voxel sizes (e.g., 0.5x0.5x3 mm³). We resample all volumes to a common isotropic resolution of 1.0x1.0x1.0 mm³ using trilinear interpolation for the image and nearest-neighbor for the ground truth masks. Following resampling, all volumes are centrally cropped or zero-padded to a fixed matrix size of $128 \times 128 \times 128$ voxels. This uniform input dimension is essential for efficient batch processing in deep learning frameworks.
+    
+    \subsection{Intensity Harmonization:} Even after per-subject normalization, systematic intensity differences may persist between the MS and control groups due to disease effects or scanner drift. We perform harmonization by calculating the mean and standard deviation of brain intensities for each subject, then computing global target statistics as the average across all subjects. Each image is then transformed to match these global statistics. This step minimizes batch effects and ensures the model focuses on disease-specific patterns, not cohort-level intensity biases.
+
+
+After preprocessing, each subject is represented by a clean, standardized 3D FLAIR volume and a corresponding four-element clinical feature vector, forming the foundation for our multimodal analysis.
+
+\section{MRI Feature Extraction (CNN Encoder)}
+\label{sec:mri_encoder}
+
+To transform the preprocessed 3D MRI volume into a compact, informative feature vector, we employ a 2D Convolutional Neural Network (CNN) encoder. This network is designed to extract hierarchical spatial patterns indicative of MS pathology, such as hyperintense white matter lesions, atrophy, or ventricle enlargement.
+
+\subsection{Network Architecture}
+The encoder operates on a single 2D axial slice ($128 \times 128$ pixels) extracted from the middle of the preprocessed 3D volume. We chose a 2D approach over 3D for its computational efficiency and lower risk of overfitting given our modest dataset size. The architecture consists of three sequential convolutional blocks:
+
+\begin{enumerate}
+    \item \textbf{Block 1:} Conv2D (16 filters, 3x3 kernel) $\rightarrow$ BatchNorm $\rightarrow$ ReLU $\rightarrow$ MaxPool2D (2x2) $\rightarrow$ Dropout (0.3). Output: $64 \times 64 \times 16$.
+    \item \textbf{Block 2:} Conv2D (32 filters, 3x3 kernel) $\rightarrow$ BatchNorm $\rightarrow$ ReLU $\rightarrow$ MaxPool2D (2x2) $\rightarrow$ Dropout (0.3). Output: $32 \times 32 \times 32$.
+    \item \textbf{Block 3:} Conv2D (64 filters, 3x3 kernel) $\rightarrow$ BatchNorm $\rightarrow$ ReLU $\rightarrow$ MaxPool2D (2x2). Output: $16 \times 16 \times 64$.
+\end{enumerate}
+
+Following the convolutional blocks, a \textbf{Global Average Pooling} layer reduces the $16 \times 16 \times 64$ feature map to a single 64-dimensional vector by taking the average value of each of the 64 channels across all spatial locations. This 64-number vector, $\mathbf{f}_{\text{MRI}} \in \mathbb{R}^{64}$, serves as the distilled "imaging signature" for the patient, encoding multi-scale visual features relevant to MS diagnosis.
+
+\subsection{Training Strategy}
+The CNN encoder is not pre-trained; its weights are learned from scratch as part of the end-to-end training of the classification pipeline. Training uses the AdamW optimizer (learning rate $5\times10^{-4}$, weight decay $1\times10^{-2}$) with mini-batches of 20 subjects. To improve generalization, we apply on-the-fly data augmentation to the 2D input slices during training, including random horizontal/vertical flips, 90-degree rotations, and intensity scaling (0.7 to 1.3). Training is regularized with dropout and monitored using early stopping based on validation loss to prevent overfitting.
+
+\section{Clinical Feature Extraction (MLP Encoder)}
+\label{sec:clinical_encoder}
+
+Clinical data provides complementary, non-imaging information crucial for a holistic assessment. Our clinical encoder processes four key variables: Age, Sex, EDSS score, and OCB status.
+
+\subsection{Feature Encoding \& Normalization}
+Each variable is encoded as a numerical value and normalized to the [0,1] range:
+\begin{itemize}
+    \item Age: $\text{age} / 100$
+    \item Sex: 0 (Male), 1 (Female)
+    \item EDSS: $\text{EDSS} / 10$
+    \item OCB: 0 (Negative), 1 (Positive)
+\end{itemize}
+This yields a 4-dimensional input vector $\mathbf{x}_{\text{clin}} \in [0,1]^4$.
+
+\subsection{MLP Architecture}
+A shallow Multi-Layer Perceptron (MLP) transforms this clinical vector into a richer feature representation. The network is designed to be simple to avoid overfitting. It consists of two hidden layers, each with 16 neurons, using ReLU activation functions and dropout regularization (rate 0.2 after the first layer). The final output is a 16-dimensional clinical feature vector $\mathbf{f}_{\text{clin}} \in \mathbb{R}^{16}$. This network can learn non-linear interactions between clinical variables (e.g., the combined effect of high EDSS and positive OCB).
+
+\section{Adaptive Attention-Based Fusion}
+\label{sec:fusion}
+
+The core innovation of MSFusionXAI lies in its fusion mechanism, which dynamically integrates the MRI and clinical feature vectors.
+
+\subsection{Motivation and Architecture}
+A patient's diagnosis may rely more heavily on imaging (e.g., clear lesions) or on clinical data (e.g., positive biomarkers with subtle scans). A static fusion method, like simple concatenation, cannot capture this patient-specific context. Our adaptive attention module learns to assign an importance weight to each modality \textit{for each individual patient}.
+
+The process is as follows:
+\begin{enumerate}
+    \item \textbf{Concatenation:} The MRI and clinical feature vectors are concatenated: $\mathbf{h} = [\mathbf{f}_{\text{MRI}} \,||\, \mathbf{f}_{\text{clin}}] \in \mathbb{R}^{80}$.
+    
+    \item \textbf{Attention Network:} A small neural network with one hidden layer (32 neurons, ReLU) processes $\mathbf{h}$ to produce two scalar \textit{logits}, $z_{\text{MRI}}$ and $z_{\text{clin}}$.
+    
+    \item \textbf{Weight Calculation:} A softmax function converts these logits into normalized attention weights that sum to 1:
+    \begin{equation}
+    [\alpha_{\text{MRI}}, \alpha_{\text{clin}}] = \text{softmax}([z_{\text{MRI}}, z_{\text{clin}}]) = \left[\frac{e^{z_{\text{MRI}}}}{e^{z_{\text{MRI}}}+e^{z_{\text{clin}}}}, \frac{e^{z_{\text{clin}}}}{e^{z_{\text{MRI}}}+e^{z_{\text{clin}}}}\right]
+    \end{equation}
+    
+    \textbf{Explanation of Softmax:} The softmax function takes two raw scores (logits) from the attention network and converts them into two weights that always sum to exactly 1.0, similar to splitting 100\% between two choices. The exponential function ($e^x$) ensures both weights are positive. If the MRI logit is much larger than the clinical logit, $\alpha_{\text{MRI}}$ will be close to 1 (meaning the model trusts MRI evidence more). If both logits are similar, both weights will be around 0.5 (equal trust in both sources). This mathematical formulation allows the model to automatically decide which data source is more reliable for each specific patient.
+    
+    \textbf{Clinical Example:} For a patient with clear, large lesions visible on MRI but only mild clinical symptoms, the attention network will assign $\alpha_{\text{MRI}} = 0.85$ and $\alpha_{\text{clin}} = 0.15$, meaning 85\% of the diagnostic decision weight comes from imaging evidence. Conversely, for an early-stage MS patient with subtle MRI findings but strong clinical indicators (high EDSS and positive OCB), the weights might be $\alpha_{\text{MRI}} = 0.30$ and $\alpha_{\text{clin}} = 0.70$, prioritizing clinical evidence.
+    
+    \item \textbf{Weighted Fusion:} The final, fused feature vector is a \textit{weighted concatenation}:
+    \begin{equation}
+    \mathbf{f}_{\text{fused}} = [\alpha_{\text{MRI}} \cdot \mathbf{f}_{\text{MRI}} \,||\, \alpha_{\text{clin}} \cdot \mathbf{f}_{\text{clin}}] \in \mathbb{R}^{80}
+    \end{equation}
+    
+    \textbf{Explanation of Weighted Fusion:} This equation shows how the model combines information from both sources. Each feature vector ($\mathbf{f}_{\text{MRI}}$ and $\mathbf{f}_{\text{clin}}$) is multiplied by its attention weight before being combined. This multiplication acts as a volume control—turning up the important information and turning down the less relevant information. If $\alpha_{\text{MRI}} = 0.8$, the MRI features are amplified to 80\% of their original strength, making them more influential in the final decision. Meanwhile, if $\alpha_{\text{clin}} = 0.2$, the clinical features are reduced to 20\%, playing a supporting role. This weighted combination ensures that the most trustworthy evidence dominates the diagnostic process, just as a neurologist would prioritize clear MRI findings or strong clinical indicators depending on each patient's specific presentation.
+\end{enumerate}
+
+The fused vector $\mathbf{f}_{\text{fused}}$ is then passed to the final classifier. The entire attention mechanism is differentiable and trained end-to-end with the rest of the pipeline, allowing the model to automatically learn the optimal weighting strategy from the training data.
+
+\section{Multimodal Classification}
+\label{sec:classification}
+
+The fused feature vector $\mathbf{f}_{\text{fused}}$ is fed into a classification head that predicts whether the patient has MS or is Healthy. This classifier is a simple two-layer neural network with 32 hidden neurons, using ReLU activation and dropout (rate 0.5) for regularization. The output layer produces two scores (logits) for the MS and Healthy classes, which are converted to probabilities using softmax. The predicted class is determined by which probability is higher: if the MS probability exceeds 0.5, the patient is classified as MS; otherwise, as Healthy.
+
+\subsection{Training Strategy and Cross-Validation}
+
+The entire MSFusionXAI pipeline—MRI encoder, clinical encoder, attention fusion, and classifier—is trained jointly end-to-end using backpropagation. This means all components learn together to minimize classification errors. We use the AdamW optimizer with a learning rate of $5\times10^{-4}$ and weight decay of $1\times10^{-2}$.
+
+\subsubsection{Five-Fold Stratified Cross-Validation}
+
+Given our limited dataset of 92 subjects, we employ \textbf{five-fold stratified cross-validation} to maximize data utilization and obtain robust performance estimates. This rigorous evaluation strategy works as follows:
+
+\begin{enumerate}
+    \item \textbf{Data Partitioning:} The 92 subjects (46 MS patients + 46 healthy controls) are randomly divided into five equal-sized folds, with approximately 18-19 subjects per fold. Crucially, the partitioning is \textit{stratified}, meaning each fold maintains the same class balance (roughly 50\% MS, 50\% Healthy) as the overall dataset.
+    
+    \item \textbf{Iterative Training:} Training is repeated five times (five iterations). In each iteration:
+    \begin{itemize}
+        \item One fold is held out as the \textbf{validation set} (approximately 18-19 subjects)
+        \item The remaining four folds are combined to form the \textbf{training set} (approximately 73-74 subjects)
+        \item The model is trained from scratch on the training set
+        \item Performance is evaluated on the held-out validation fold
+    \end{itemize}
+    
+    \item \textbf{Comprehensive Evaluation:} Across the five iterations, each of the 92 subjects appears in the validation set exactly once. This ensures that every subject contributes to the performance assessment, providing an unbiased estimate of how well the model generalizes to unseen data.
+    
+    \item \textbf{Performance Aggregation:} Final performance metrics (accuracy, precision, recall, F1-score) are computed by averaging results across all five validation folds. Standard deviations quantify the variability across folds, indicating model stability.
+\end{enumerate}
+
+\textbf{Why Cross-Validation Matters:} With only 92 subjects, a single train-test split would waste valuable data and risk overfitting to a particular split. Five-fold cross-validation maximizes training data usage (80\% per fold) while providing five independent performance estimates. The stratified approach ensures each fold is representative of the overall class distribution, preventing biased evaluation. This methodology is the gold standard for small medical datasets and ensures our reported results are reliable and reproducible.
+
+\subsubsection{Training Configuration}
+
+Within each cross-validation fold, training proceeds for up to 60 epochs with early stopping triggered if validation loss fails to improve for 10 consecutive epochs, preventing overfitting. Data augmentation (random horizontal/vertical flips, 90-degree rotations, intensity scaling 0.7-1.3) is applied on-the-fly during training to artificially expand the effective dataset size and improve model robustness to natural image variability. Mini-batch size is set to 20 subjects. Gradient clipping with maximum global norm 1.0 prevents exploding gradients that could destabilize training.
+
+\subsection{Conditional Branching Logic}
+After classification, MSFusionXAI uses conditional logic to adapt its workflow:
+\begin{itemize}
+    \item \textbf{If Healthy:} The pipeline stops immediately and generates a summary report showing the classification result, confidence score, and attention weights explaining why the patient was classified as healthy.
+    \item \textbf{If MS:} The pipeline activates the lesion segmentation module to provide detailed quantitative analysis of brain lesions, then generates a comprehensive diagnostic report.
+\end{itemize}
+This conditional branching mirrors real clinical practice, where detailed lesion analysis is performed only for patients with suspected or confirmed MS, optimizing computational efficiency and clinical relevance.
+\section{Lesion Segmentation Module (ResNet34U-Net)}
+\label{sec:segmentation}
+
+For patients classified as MS, automated lesion segmentation provides crucial quantitative biomarkers including total lesion volume, lesion count, and spatial distribution. These metrics support disease staging, treatment planning, and longitudinal monitoring.
+
+\subsection{Architecture}
+The segmentation network uses a U-Net architecture with a ResNet34 encoder pre-trained on ImageNet. U-Net is a proven design for medical image segmentation, featuring an encoder-decoder structure with skip connections that preserve spatial details. The ResNet34 encoder leverages transfer learning from natural images to provide robust feature extraction despite our limited dataset size (46 MS patients).
+
+The network operates on 2.5D inputs: five consecutive axial slices ($128 \times 128 \times 5$) centered at each target slice, providing limited 3D context while maintaining computational efficiency. The encoder progressively downsamples spatial resolution while increasing feature depth, and the decoder upsamples back to full resolution. The output is a $128 \times 128$ probability map for the center slice, where each pixel value represents the likelihood that the corresponding brain voxel belongs to a lesion.
+
+\subsection{Training Strategy}
+The segmentation network is trained separately from the classification pipeline using only the 46 MS patients (split into 32 training, 7 validation, 7 testing). To address the severe class imbalance (lesions occupy less than 5\% of brain volume), we use stratified patch sampling: for each training volume, we extract 120 patches, with 75\% centered on lesions and 25\% on background regions.
+
+The network is trained using a hybrid loss function that combines Dice coefficient (optimizing global overlap between predicted and true lesion masks) with Binary Cross-Entropy (ensuring accurate voxel-level predictions). This dual objective balances spatial overlap with local accuracy. Training uses the AdamW optimizer with cosine annealing learning rate schedule over 100 epochs. Extensive data augmentation (flips, rotations, intensity variations, noise) improves model robustness.
+
+\subsection{Inference and Quantification}
+At inference, predictions are generated for entire 3D volumes using a sliding window approach with 50\% overlap between patches. Multiple overlapping predictions are averaged to produce smooth probability maps. Thresholding at 0.5 converts probabilities to binary masks, followed by morphological post-processing (connected component analysis, small object removal, hole filling) to refine the segmentation.
+
+From the final lesion masks, we extract quantitative features for clinical interpretation: total lesion volume (in milliliters), lesion count, mean and largest lesion sizes, lesion load (percentage of brain volume occupied by lesions), and spatial distribution categorized by anatomical region (periventricular, juxtacortical, infratentorial). These metrics are integrated into the final diagnostic report.
+
+\section{Explainability Module (XAI)}
+\label{sec:xai}
+
+MSFusionXAI integrates explainability at multiple levels to demystify its decisions for clinicians.
+
+\subsection{Attention-Based Explanations}
+The learned attention weights $\alpha_{\text{MRI}}$ and $\alpha_{\text{clin}}$ provide immediate, global insight into the model's reasoning for a given case. They answer the question: "What type of information was most important for this specific diagnosis?" These weights are visualized in individual patient reports (e.g., as a bar chart) and analyzed statistically across the cohort. For instance, we expect MS patients with high lesion burden to show high $\alpha_{\text{MRI}}$, validating that the model has learned to prioritize strong imaging evidence.
+
+\subsection{Lesion Correlation Analysis}
+For patients classified as MS, we perform quantitative analyses linking the AI's predictions to its findings:
+\begin{itemize}
+    \item \textbf{Confidence vs. Burden:} We calculate the correlation between the model's predicted MS probability (its confidence) and the total lesion volume it segmented. A strong positive correlation indicates the model's confidence logically increases with more visible pathology.
+    \item \textbf{Attention vs. Burden:} We correlate $\alpha_{\text{MRI}}$ with lesion volume. Patients with larger lesions should, rationally, be assigned higher MRI attention weights. This serves as a sanity check on the attention mechanism.
+    \item \textbf{Visual Overlay:} The predicted lesion segmentation mask is overlaid on the original FLAIR image. This allows a clinician to instantly verify \textit{which regions} the AI identified as pathological, building trust in the segmentation output.
+\end{itemize}
+
+\subsection{Natural-Language Report Generation}
+To translate all technical outputs into actionable clinical communication, we employ \textbf{BioBERT}~\cite{lee2020biobert}, a language model specialized for biomedical text. A structured report is generated by populating a template with:
+\begin{itemize}
+    \item Patient demographics and clinical variables.
+    \item Final classification (MS/Healthy) with confidence score.
+    \item Interpretation of attention weights (e.g., "The diagnosis was primarily based on MRI findings (82\% weight)").
+    \item For MS cases: Quantitative lesion metrics (count, volume, load) and their spatial summary (e.g., "predominantly periventricular").
+    \item A synthesized "Clinical Impression" section that integrates all findings into a narrative format familiar to neurologists.
+\end{itemize}
+This automated report bridges the gap between the AI's complex computations and the structured documentation required in clinical workflows, significantly enhancing the system's practical utility.
+
+\section{Implementation Details}
+\label{sec:implementation}
+
+MSFusionXAI was built using Python 3.8 with PyTorch 1.10 for deep learning components. Medical image processing used established libraries including NiBabel 3.2 for NIfTI file handling, SimpleITK 2.1 for preprocessing operations, and NumPy/SciPy for numerical computations. The segmentation network utilized the Segmentation Models PyTorch library for pre-implemented U-Net architectures with ResNet backbones. All training and inference were accelerated using NVIDIA CUDA 11.2 on Google Colab Pro environments with Tesla T4/P100 GPUs (16 GB memory). All operations were made deterministic through fixed random seeds to ensure reproducibility.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+This chapter detailed the MSFusionXAI framework, which integrates MRI and clinical data through adaptive attention fusion, performs conditional lesion segmentation, and provides multi-layered explanations. The pipeline processes heterogeneous data through standardized preprocessing, parallel feature extraction, patient-specific modality weighting, and conditional workflow branching that mirrors clinical practice. The adaptive attention mechanism, formalized through softmax weighting and weighted fusion equations, enables the system to dynamically prioritize the most reliable evidence sources for each patient, similar to how experienced neurologists integrate multimodal information. The following chapter will present comprehensive experimental validation including classification performance across five-fold cross-validation, segmentation accuracy metrics, attention weight analysis, and ablation studies quantifying the contribution of each architectural component.

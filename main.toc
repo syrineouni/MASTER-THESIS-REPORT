@@ -1,0 +1,139 @@
+\contentsline {chapter}{Abstract}{I}{chapter*.1}%
+\selectlanguage *{english}
+\xpginauxfiletrue 
+\selectlanguage *{english}
+\contentsline {chapter}{Dedication}{II}{chapter*.2}%
+\contentsline {chapter}{Acknowledgment}{III}{chapter*.3}%
+\contentsline {chapter}{Acronyms}{X}{chapter*.4}%
+\contentsline {chapter}{General Introduction}{1}{chapter*.5}%
+\contentsline {chapter}{\numberline {1}Background Concepts}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Introduction}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Medical Concepts}{3}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Multiple Sclerosis (MS)}{3}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Causes and Symptoms}{4}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Stages of Multiple Sclerosis}{5}{subsection.1.2.3}%
+\contentsline {subsubsection}{\numberline {1.2.3.1}Clinically Isolated Syndrome (CIS)}{5}{subsubsection.1.2.3.1}%
+\contentsline {subsubsection}{\numberline {1.2.3.2}Relapsing-Remitting MS (RRMS)}{5}{subsubsection.1.2.3.2}%
+\contentsline {subsubsection}{\numberline {1.2.3.3}Secondary Progressive MS (SPMS)}{5}{subsubsection.1.2.3.3}%
+\contentsline {subsubsection}{\numberline {1.2.3.4}Primary Progressive MS (PPMS)}{5}{subsubsection.1.2.3.4}%
+\contentsline {subsection}{\numberline {1.2.4}MS Detection Methods}{6}{subsection.1.2.4}%
+\contentsline {subsubsection}{\numberline {1.2.4.1}MRI in MS Detection}{6}{subsubsection.1.2.4.1}%
+\contentsline {subsubsection}{\numberline {1.2.4.2}CT Imaging in MS Detection}{7}{subsubsection.1.2.4.2}%
+\contentsline {subsubsection}{\numberline {1.2.4.3}CSF Biomarkers in Multiple Sclerosis}{8}{subsubsection.1.2.4.3}%
+\contentsline {subsubsection}{\numberline {1.2.4.4}Clinical History and Diagnostic Criteria}{8}{subsubsection.1.2.4.4}%
+\contentsline {subsection}{\numberline {1.2.5}Limitations of MS Detection Methods}{8}{subsection.1.2.5}%
+\contentsline {section}{\numberline {1.3}Computer Science Concepts}{9}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Data Preprocessing}{9}{subsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.1.1}Medical Image Preprocessing}{9}{subsubsection.1.3.1.1}%
+\contentsline {subsubsection}{\numberline {1.3.1.2}Text and Clinical Data Preprocessing}{12}{subsubsection.1.3.1.2}%
+\contentsline {subsection}{\numberline {1.3.2}Artificial Intelligence}{12}{subsection.1.3.2}%
+\contentsline {subsubsection}{\numberline {1.3.2.1}Machine Learning (ML)}{13}{subsubsection.1.3.2.1}%
+\contentsline {subsubsection}{\numberline {1.3.2.2}Artificial Neural Networks (ANNs)}{13}{subsubsection.1.3.2.2}%
+\contentsline {subsubsection}{\numberline {1.3.2.3}Deep Learning (DL)}{15}{subsubsection.1.3.2.3}%
+\contentsline {subsubsection}{\numberline {1.3.2.4}Convolutional Neural Networks (CNNs)}{15}{subsubsection.1.3.2.4}%
+\contentsline {subsubsection}{\numberline {1.3.2.5}DenseNet}{16}{subsubsection.1.3.2.5}%
+\contentsline {subsubsection}{\numberline {1.3.2.6}U-Net}{16}{subsubsection.1.3.2.6}%
+\contentsline {subsubsection}{\numberline {1.3.2.7}ResNet34}{17}{subsubsection.1.3.2.7}%
+\contentsline {subsubsection}{\numberline {1.3.2.8}Multi-Layer Perceptron (MLP)}{17}{subsubsection.1.3.2.8}%
+\contentsline {subsubsection}{\numberline {1.3.2.9}Long Short-Term Memory Networks (LSTM)}{18}{subsubsection.1.3.2.9}%
+\contentsline {subsection}{\numberline {1.3.3}Data Integration}{18}{subsection.1.3.3}%
+\contentsline {subsection}{\numberline {1.3.4}Explainable Artificial Intelligence (XAI)}{18}{subsection.1.3.4}%
+\contentsline {subsubsection}{\numberline {1.3.4.1}Attention-Based Explanation}{19}{subsubsection.1.3.4.1}%
+\contentsline {subsubsection}{\numberline {1.3.4.2}Natural Language Explanation}{19}{subsubsection.1.3.4.2}%
+\contentsline {section}{\numberline {1.4}Conclusion}{19}{section.1.4}%
+\contentsline {chapter}{\numberline {2}State-Of-The-Art in Multimodal MS Detection}{20}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Introduction}{20}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Multimodal Data in MS Detection}{20}{subsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.1.1}Imaging Modalities}{20}{subsubsection.2.1.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.1.2}Clinical Assessments and Health Records}{21}{subsubsection.2.1.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.1.3}Biofluid Biomarkers}{21}{subsubsection.2.1.1.3}%
+\contentsline {subsubsection}{\numberline {2.1.1.4}Multimodal Data Integration and Artificial Intelligence}{22}{subsubsection.2.1.1.4}%
+\contentsline {subsection}{\numberline {2.1.2}Machine Learning and Deep Learning in Multimodal MS Analysis}{22}{subsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.2.1}Deep Learning for Multimodal Feature Representation}{22}{subsubsection.2.1.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.2.2}CNN-Based Lesion Segmentation as a Multimodal Component}{23}{subsubsection.2.1.2.2}%
+\contentsline {subsubsection}{\numberline {2.1.2.3}Hybrid and Advanced Multimodal AI Pipelines}{23}{subsubsection.2.1.2.3}%
+\contentsline {subsubsection}{\numberline {2.1.2.4}Traditional Machine Learning as Baselines}{24}{subsubsection.2.1.2.4}%
+\contentsline {subsubsection}{\numberline {2.1.2.5}Challenges in Multimodal MS Machine Learning}{24}{subsubsection.2.1.2.5}%
+\contentsline {subsection}{\numberline {2.1.3}Explainability in AI Models for MS Detection}{24}{subsection.2.1.3}%
+\contentsline {subsubsection}{\numberline {2.1.3.1}Model-Agnostic Feature Attribution}{24}{subsubsection.2.1.3.1}%
+\contentsline {subsubsection}{\numberline {2.1.3.2}Attention-Based Explanations}{24}{subsubsection.2.1.3.2}%
+\contentsline {subsubsection}{\numberline {2.1.3.3}Saliency-Based Explanations for Imaging}{25}{subsubsection.2.1.3.3}%
+\contentsline {section}{\numberline {2.2}Comparative Analysis}{25}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Assessment of Related Works}{27}{subsection.2.2.1}%
+\contentsline {section}{\numberline {2.3}Research Motivation and Objective}{28}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Conclusion}{28}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Proposed Method: MSFusionXAI}{30}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introduction}{30}{section.3.1}%
+\contentsline {section}{\numberline {3.2}System Overview}{30}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Dataset Description}{31}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Cohort Composition}{31}{subsection.3.3.1}%
+\contentsline {section}{\numberline {3.4}MRI Preprocessing Pipeline}{31}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Orientation Standardization \& Rotation Correction:}{32}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Bias Field Correction:}{32}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Skull Stripping:}{32}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Intensity Normalization:}{32}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.5}Denoising:}{32}{subsection.3.4.5}%
+\contentsline {subsection}{\numberline {3.4.6}Geometric Resampling:}{33}{subsection.3.4.6}%
+\contentsline {subsection}{\numberline {3.4.7}Intensity Harmonization:}{33}{subsection.3.4.7}%
+\contentsline {section}{\numberline {3.5}MRI Feature Extraction (CNN Encoder)}{33}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Network Architecture}{33}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Training Strategy}{34}{subsection.3.5.2}%
+\contentsline {section}{\numberline {3.6}Clinical Feature Extraction (MLP Encoder)}{34}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Feature Encoding \& Normalization}{34}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}MLP Architecture}{34}{subsection.3.6.2}%
+\contentsline {section}{\numberline {3.7}Adaptive Attention-Based Fusion}{35}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Motivation and Architecture}{35}{subsection.3.7.1}%
+\contentsline {section}{\numberline {3.8}Multimodal Classification}{36}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}Training Strategy and Cross-Validation}{36}{subsection.3.8.1}%
+\contentsline {subsubsection}{\numberline {3.8.1.1}Five-Fold Stratified Cross-Validation}{36}{subsubsection.3.8.1.1}%
+\contentsline {subsubsection}{\numberline {3.8.1.2}Training Configuration}{37}{subsubsection.3.8.1.2}%
+\contentsline {subsection}{\numberline {3.8.2}Conditional Branching Logic}{37}{subsection.3.8.2}%
+\contentsline {section}{\numberline {3.9}Lesion Segmentation Module (ResNet34U-Net)}{38}{section.3.9}%
+\contentsline {subsection}{\numberline {3.9.1}Architecture}{38}{subsection.3.9.1}%
+\contentsline {subsection}{\numberline {3.9.2}Training Strategy}{38}{subsection.3.9.2}%
+\contentsline {subsection}{\numberline {3.9.3}Inference and Quantification}{38}{subsection.3.9.3}%
+\contentsline {section}{\numberline {3.10}Explainability Module (XAI)}{39}{section.3.10}%
+\contentsline {subsection}{\numberline {3.10.1}Attention-Based Explanations}{39}{subsection.3.10.1}%
+\contentsline {subsection}{\numberline {3.10.2}Lesion Correlation Analysis}{39}{subsection.3.10.2}%
+\contentsline {subsection}{\numberline {3.10.3}Natural-Language Report Generation}{39}{subsection.3.10.3}%
+\contentsline {section}{\numberline {3.11}Implementation Details}{40}{section.3.11}%
+\contentsline {section}{\numberline {3.12}Conclusion}{40}{section.3.12}%
+\contentsline {chapter}{\numberline {4}Experiments, Results \& Discussion}{41}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introduction}{41}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Experimental Setup}{41}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Hardware and Software Environment}{41}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Dataset Split}{41}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Training Hyperparameters}{42}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Evaluation Metrics}{42}{subsection.4.2.4}%
+\contentsline {subsubsection}{\numberline {4.2.4.1}Classification Metrics}{42}{subsubsection.4.2.4.1}%
+\contentsline {subsubsection}{\numberline {4.2.4.2}Segmentation Metrics}{43}{subsubsection.4.2.4.2}%
+\contentsline {section}{\numberline {4.3}Classification Results}{43}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Five-Fold Cross-Validation Results}{43}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Comparison: MRI-Only vs Clinical-Only vs Fusion}{44}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Confusion Matrix Analysis}{45}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Analysis of Variability Between Folds}{45}{subsection.4.3.4}%
+\contentsline {section}{\numberline {4.4}Segmentation Results}{46}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Dice Score on Test Set}{46}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Sensitivity and Specificity}{46}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Lesion Volume Quantification}{46}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Qualitative Visualizations}{47}{subsection.4.4.4}%
+\contentsline {section}{\numberline {4.5}Comparison with State-of-the-Art Segmentation Methods}{48}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Explainability Analysis}{49}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Attention Weight Analysis}{49}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Correlation Between Lesion Burden and MRI Attention}{49}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}BioBERT-Generated Clinical Reports}{50}{subsection.4.6.3}%
+\contentsline {subsection}{\numberline {4.6.4}Case Studies with Explainable Reports}{52}{subsection.4.6.4}%
+\contentsline {subsection}{\numberline {4.6.5}Explainability Validation}{52}{subsection.4.6.5}%
+\contentsline {section}{\numberline {4.7}Ablation Studies}{53}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Attention Fusion vs Simple Concatenation}{53}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}Impact of Preprocessing Steps}{53}{subsection.4.7.2}%
+\contentsline {subsection}{\numberline {4.7.3}Impact of Removing Clinical Features}{53}{subsection.4.7.3}%
+\contentsline {section}{\numberline {4.8}Computational Efficiency}{54}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Training Time}{54}{subsection.4.8.1}%
+\contentsline {subsection}{\numberline {4.8.2}Inference Time}{54}{subsection.4.8.2}%
+\contentsline {section}{\numberline {4.9}Discussion}{54}{section.4.9}%
+\contentsline {subsection}{\numberline {4.9.1}Interpretation of Results}{54}{subsection.4.9.1}%
+\contentsline {subsection}{\numberline {4.9.2}Limitations}{54}{subsection.4.9.2}%
+\contentsline {subsection}{\numberline {4.9.3}Clinical Implications}{55}{subsection.4.9.3}%
+\contentsline {section}{\numberline {4.10}Conclusion}{55}{section.4.10}%
+\contentsline {chapter}{General Conclusion and Future Work}{56}{chapter*.32}%

@@ -1,0 +1,2138 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{turn0search5}{article}{}
+      \name{author}{1}{}{%
+        {{hash=5f7ff65b891e0bf38cf8675b883a01d2}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Trapp},
+           giveni={T\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{5f7ff65b891e0bf38cf8675b883a01d2}
+      \strng{fullhash}{5f7ff65b891e0bf38cf8675b883a01d2}
+      \strng{bibnamehash}{5f7ff65b891e0bf38cf8675b883a01d2}
+      \strng{authorbibnamehash}{5f7ff65b891e0bf38cf8675b883a01d2}
+      \strng{authornamehash}{5f7ff65b891e0bf38cf8675b883a01d2}
+      \strng{authorfullhash}{5f7ff65b891e0bf38cf8675b883a01d2}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Annual Review of Neuroscience}
+      \field{title}{Multiple sclerosis: an immune or neurodegenerative disorder?}
+      \field{volume}{31}
+      \field{year}{2008}
+      \field{pages}{247\bibrangedash 269}
+      \range{pages}{23}
+    \endentry
+    \entry{turn0search2}{article}{}
+      \name{author}{1}{}{%
+        {{hash=516469f4b780dc331b22fa6e0b8905b3}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Sreeram\bibnamedelimb V\bibnamedelima Ramagopalan},
+           giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod\bibinitdelim R\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{516469f4b780dc331b22fa6e0b8905b3}
+      \strng{fullhash}{516469f4b780dc331b22fa6e0b8905b3}
+      \strng{bibnamehash}{516469f4b780dc331b22fa6e0b8905b3}
+      \strng{authorbibnamehash}{516469f4b780dc331b22fa6e0b8905b3}
+      \strng{authornamehash}{516469f4b780dc331b22fa6e0b8905b3}
+      \strng{authorfullhash}{516469f4b780dc331b22fa6e0b8905b3}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Lancet Neurology}
+      \field{number}{7}
+      \field{title}{Multiple sclerosis: risk factors, prodromes, and potential causal pathways}
+      \field{volume}{9}
+      \field{year}{2010}
+      \field{pages}{727\bibrangedash 739}
+      \range{pages}{13}
+    \endentry
+    \entry{turn0search8}{article}{}
+      \name{author}{1}{}{%
+        {{hash=1643d86a3f2a57be25a9e7c4a312cc64}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={M\bibnamedelima Tejera-Alhambra},
+           giveni={M\bibinitperiod\bibinitdelim T\bibinithyphendelim A\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{1643d86a3f2a57be25a9e7c4a312cc64}
+      \strng{fullhash}{1643d86a3f2a57be25a9e7c4a312cc64}
+      \strng{bibnamehash}{1643d86a3f2a57be25a9e7c4a312cc64}
+      \strng{authorbibnamehash}{1643d86a3f2a57be25a9e7c4a312cc64}
+      \strng{authornamehash}{1643d86a3f2a57be25a9e7c4a312cc64}
+      \strng{authorfullhash}{1643d86a3f2a57be25a9e7c4a312cc64}
+      \field{extraname}{3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Reviews Immunology}
+      \field{number}{7}
+      \field{title}{Immunopathology of multiple sclerosis}
+      \field{volume}{5}
+      \field{year}{2023}
+      \field{pages}{560\bibrangedash 570}
+      \range{pages}{11}
+    \endentry
+    \entry{turn0search17}{article}{}
+      \name{author}{1}{}{%
+        {{hash=726675753469b6d345d270f6869c4ecc}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Li},
+           giveni={L\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{726675753469b6d345d270f6869c4ecc}
+      \strng{fullhash}{726675753469b6d345d270f6869c4ecc}
+      \strng{bibnamehash}{726675753469b6d345d270f6869c4ecc}
+      \strng{authorbibnamehash}{726675753469b6d345d270f6869c4ecc}
+      \strng{authornamehash}{726675753469b6d345d270f6869c4ecc}
+      \strng{authorfullhash}{726675753469b6d345d270f6869c4ecc}
+      \field{extraname}{4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Current Opinion in Immunology}
+      \field{number}{6}
+      \field{title}{B cells in multiple sclerosis: connecting the dots}
+      \field{volume}{24}
+      \field{year}{2012}
+      \field{pages}{752\bibrangedash 758}
+      \range{pages}{7}
+    \endentry
+    \entry{Teunissen2009}{article}{}
+      \name{author}{1}{}{%
+        {{hash=da32cdd158c9bbed73ecf69230c4b8a8}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Teunissen},
+           giveni={T\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{da32cdd158c9bbed73ecf69230c4b8a8}
+      \strng{fullhash}{da32cdd158c9bbed73ecf69230c4b8a8}
+      \strng{bibnamehash}{da32cdd158c9bbed73ecf69230c4b8a8}
+      \strng{authorbibnamehash}{da32cdd158c9bbed73ecf69230c4b8a8}
+      \strng{authornamehash}{da32cdd158c9bbed73ecf69230c4b8a8}
+      \strng{authorfullhash}{da32cdd158c9bbed73ecf69230c4b8a8}
+      \field{extraname}{5}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Neurobiology of Disease}
+      \field{number}{2}
+      \field{title}{Cerebrospinal fluid biomarkers in multiple sclerosis}
+      \field{volume}{35}
+      \field{year}{2009}
+      \field{pages}{117\bibrangedash 127}
+      \range{pages}{11}
+    \endentry
+    \entry{genetech}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=befb24a9614dd428767cc4df6ca39b6a}{%
+           family={corporation},
+           familyi={c\bibinitperiod},
+           given={Genentech\bibnamedelima Biotechnology},
+           giveni={G\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{befb24a9614dd428767cc4df6ca39b6a}
+      \strng{fullhash}{befb24a9614dd428767cc4df6ca39b6a}
+      \strng{bibnamehash}{befb24a9614dd428767cc4df6ca39b6a}
+      \strng{authorbibnamehash}{befb24a9614dd428767cc4df6ca39b6a}
+      \strng{authornamehash}{befb24a9614dd428767cc4df6ca39b6a}
+      \strng{authorfullhash}{befb24a9614dd428767cc4df6ca39b6a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Multiple Sclerosis}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.gene.com/patients/disease-education/multiple-sclerosis
+      \endverb
+      \verb{url}
+      \verb https://www.gene.com/patients/disease-education/multiple-sclerosis
+      \endverb
+    \endentry
+    \entry{InternationalMSConsortium2019}{article}{}
+      \name{author}{1}{}{%
+        {{hash=9771ad247dbfa13eef9920650fa503da}{%
+           family={Consortium},
+           familyi={C\bibinitperiod},
+           given={International\bibnamedelimb Multiple\bibnamedelimb Sclerosis\bibnamedelima Genetics},
+           giveni={I\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{9771ad247dbfa13eef9920650fa503da}
+      \strng{fullhash}{9771ad247dbfa13eef9920650fa503da}
+      \strng{bibnamehash}{9771ad247dbfa13eef9920650fa503da}
+      \strng{authorbibnamehash}{9771ad247dbfa13eef9920650fa503da}
+      \strng{authornamehash}{9771ad247dbfa13eef9920650fa503da}
+      \strng{authorfullhash}{9771ad247dbfa13eef9920650fa503da}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Science}
+      \field{number}{6460}
+      \field{title}{Multiple sclerosis genomic map implicates peripheral immune cells and microglia in susceptibility}
+      \field{volume}{365}
+      \field{year}{2019}
+      \field{pages}{eaav7188}
+      \range{pages}{-1}
+    \endentry
+    \entry{Sawcer2011}{article}{}
+      \name{author}{1}{}{%
+        {{hash=7e6e25c2ef8ee3f446e64a39a5538f94}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Sawcer},
+           giveni={S\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{7e6e25c2ef8ee3f446e64a39a5538f94}
+      \strng{fullhash}{7e6e25c2ef8ee3f446e64a39a5538f94}
+      \strng{bibnamehash}{7e6e25c2ef8ee3f446e64a39a5538f94}
+      \strng{authorbibnamehash}{7e6e25c2ef8ee3f446e64a39a5538f94}
+      \strng{authornamehash}{7e6e25c2ef8ee3f446e64a39a5538f94}
+      \strng{authorfullhash}{7e6e25c2ef8ee3f446e64a39a5538f94}
+      \field{extraname}{6}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{number}{7359}
+      \field{title}{Genetic risk and a primary role for cell-mediated immune mechanisms in multiple sclerosis}
+      \field{volume}{476}
+      \field{year}{2011}
+      \field{pages}{214\bibrangedash 219}
+      \range{pages}{6}
+    \endentry
+    \entry{Ascherio2014}{article}{}
+      \name{author}{1}{}{%
+        {{hash=9f19214b6b5cae71b50b03f1e1c19688}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Ascherio},
+           giveni={A\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{9f19214b6b5cae71b50b03f1e1c19688}
+      \strng{fullhash}{9f19214b6b5cae71b50b03f1e1c19688}
+      \strng{bibnamehash}{9f19214b6b5cae71b50b03f1e1c19688}
+      \strng{authorbibnamehash}{9f19214b6b5cae71b50b03f1e1c19688}
+      \strng{authornamehash}{9f19214b6b5cae71b50b03f1e1c19688}
+      \strng{authorfullhash}{9f19214b6b5cae71b50b03f1e1c19688}
+      \field{extraname}{7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{JAMA neurology}
+      \field{number}{3}
+      \field{title}{Vitamin D as an early predictor of multiple sclerosis activity and progression}
+      \field{volume}{71}
+      \field{year}{2014}
+      \field{pages}{306\bibrangedash 314}
+      \range{pages}{9}
+    \endentry
+    \entry{Hedstrom2013}{article}{}
+      \name{author}{1}{}{%
+        {{hash=6cc8b900558dff2c678d5f8db11c739a}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Hedstrom},
+           giveni={H\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{6cc8b900558dff2c678d5f8db11c739a}
+      \strng{fullhash}{6cc8b900558dff2c678d5f8db11c739a}
+      \strng{bibnamehash}{6cc8b900558dff2c678d5f8db11c739a}
+      \strng{authorbibnamehash}{6cc8b900558dff2c678d5f8db11c739a}
+      \strng{authornamehash}{6cc8b900558dff2c678d5f8db11c739a}
+      \strng{authorfullhash}{6cc8b900558dff2c678d5f8db11c739a}
+      \field{extraname}{8}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{European journal of epidemiology}
+      \field{number}{11}
+      \field{title}{Smoking and multiple sclerosis susceptibility}
+      \field{volume}{28}
+      \field{year}{2013}
+      \field{pages}{867\bibrangedash 874}
+      \range{pages}{8}
+    \endentry
+    \entry{Simpson2019}{article}{}
+      \name{author}{1}{}{%
+        {{hash=e2a60bc4cc94287afbb5a50ee5d13245}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Simpson\bibnamedelima Jr},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{e2a60bc4cc94287afbb5a50ee5d13245}
+      \strng{fullhash}{e2a60bc4cc94287afbb5a50ee5d13245}
+      \strng{bibnamehash}{e2a60bc4cc94287afbb5a50ee5d13245}
+      \strng{authorbibnamehash}{e2a60bc4cc94287afbb5a50ee5d13245}
+      \strng{authornamehash}{e2a60bc4cc94287afbb5a50ee5d13245}
+      \strng{authorfullhash}{e2a60bc4cc94287afbb5a50ee5d13245}
+      \field{extraname}{9}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Multiple Sclerosis Journal}
+      \field{number}{8}
+      \field{title}{Sunlight exposure and multiple sclerosis risk in Norway and Italy: The EnvIMS study}
+      \field{volume}{25}
+      \field{year}{2019}
+      \field{pages}{1042\bibrangedash 1049}
+      \range{pages}{8}
+    \endentry
+    \entry{Toosy2014}{article}{}
+      \name{author}{1}{}{%
+        {{hash=de3eed5e3063a73462dc1c743023e9d1}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Toosy},
+           giveni={T\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{de3eed5e3063a73462dc1c743023e9d1}
+      \strng{fullhash}{de3eed5e3063a73462dc1c743023e9d1}
+      \strng{bibnamehash}{de3eed5e3063a73462dc1c743023e9d1}
+      \strng{authorbibnamehash}{de3eed5e3063a73462dc1c743023e9d1}
+      \strng{authornamehash}{de3eed5e3063a73462dc1c743023e9d1}
+      \strng{authorfullhash}{de3eed5e3063a73462dc1c743023e9d1}
+      \field{extraname}{10}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Lancet Neurology}
+      \field{number}{1}
+      \field{title}{Optic neuritis}
+      \field{volume}{13}
+      \field{year}{2014}
+      \field{pages}{83\bibrangedash 99}
+      \range{pages}{17}
+    \endentry
+    \entry{Oreja-Guevara2012}{article}{}
+      \name{author}{1}{}{%
+        {{hash=f6b884e92da8fedec6337dfab5427b5d}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Oreja-Guevara},
+           giveni={O\bibinithyphendelim G\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{f6b884e92da8fedec6337dfab5427b5d}
+      \strng{fullhash}{f6b884e92da8fedec6337dfab5427b5d}
+      \strng{bibnamehash}{f6b884e92da8fedec6337dfab5427b5d}
+      \strng{authorbibnamehash}{f6b884e92da8fedec6337dfab5427b5d}
+      \strng{authornamehash}{f6b884e92da8fedec6337dfab5427b5d}
+      \strng{authorfullhash}{f6b884e92da8fedec6337dfab5427b5d}
+      \field{extraname}{11}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Multiple Sclerosis Journal}
+      \field{number}{1}
+      \field{title}{Sensory symptoms in multiple sclerosis}
+      \field{volume}{18}
+      \field{year}{2012}
+      \field{pages}{7\bibrangedash 16}
+      \range{pages}{10}
+    \endentry
+    \entry{Krupp2010}{article}{}
+      \name{author}{1}{}{%
+        {{hash=7b15df4e9c454d514f372297911643b4}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Krupp},
+           giveni={K\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{7b15df4e9c454d514f372297911643b4}
+      \strng{fullhash}{7b15df4e9c454d514f372297911643b4}
+      \strng{bibnamehash}{7b15df4e9c454d514f372297911643b4}
+      \strng{authorbibnamehash}{7b15df4e9c454d514f372297911643b4}
+      \strng{authornamehash}{7b15df4e9c454d514f372297911643b4}
+      \strng{authorfullhash}{7b15df4e9c454d514f372297911643b4}
+      \field{extraname}{12}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{CNS drugs}
+      \field{number}{3}
+      \field{title}{Fatigue in multiple sclerosis}
+      \field{volume}{24}
+      \field{year}{2010}
+      \field{pages}{225\bibrangedash 234}
+      \range{pages}{10}
+    \endentry
+    \entry{Rizzo2016}{article}{}
+      \name{author}{1}{}{%
+        {{hash=3581ddef1991a9fe9b8b87b3f061fb85}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Rizzo},
+           giveni={R\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{3581ddef1991a9fe9b8b87b3f061fb85}
+      \strng{fullhash}{3581ddef1991a9fe9b8b87b3f061fb85}
+      \strng{bibnamehash}{3581ddef1991a9fe9b8b87b3f061fb85}
+      \strng{authorbibnamehash}{3581ddef1991a9fe9b8b87b3f061fb85}
+      \strng{authornamehash}{3581ddef1991a9fe9b8b87b3f061fb85}
+      \strng{authorfullhash}{3581ddef1991a9fe9b8b87b3f061fb85}
+      \field{extraname}{13}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Neurology}
+      \field{number}{16}
+      \field{title}{Motor dysfunction in multiple sclerosis}
+      \field{volume}{86}
+      \field{year}{2016}
+      \field{pages}{P3.105}
+      \range{pages}{-1}
+    \endentry
+    \entry{Al-Araji2005}{article}{}
+      \name{author}{1}{}{%
+        {{hash=80e50f04c7663b9aedb96273d594e5ce}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Al-Araji},
+           giveni={A\bibinithyphendelim A\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{80e50f04c7663b9aedb96273d594e5ce}
+      \strng{fullhash}{80e50f04c7663b9aedb96273d594e5ce}
+      \strng{bibnamehash}{80e50f04c7663b9aedb96273d594e5ce}
+      \strng{authorbibnamehash}{80e50f04c7663b9aedb96273d594e5ce}
+      \strng{authornamehash}{80e50f04c7663b9aedb96273d594e5ce}
+      \strng{authorfullhash}{80e50f04c7663b9aedb96273d594e5ce}
+      \field{extraname}{14}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Multiple Sclerosis Journal}
+      \field{number}{5}
+      \field{title}{Lhermitte's sign in multiple sclerosis}
+      \field{volume}{11}
+      \field{year}{2005}
+      \field{pages}{567\bibrangedash 569}
+      \range{pages}{3}
+    \endentry
+    \entry{Lublin2014}{article}{}
+      \name{author}{1}{}{%
+        {{hash=940dd6c89f2e77ba70817df7e51b3603}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Lublin},
+           giveni={L\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{940dd6c89f2e77ba70817df7e51b3603}
+      \strng{fullhash}{940dd6c89f2e77ba70817df7e51b3603}
+      \strng{bibnamehash}{940dd6c89f2e77ba70817df7e51b3603}
+      \strng{authorbibnamehash}{940dd6c89f2e77ba70817df7e51b3603}
+      \strng{authornamehash}{940dd6c89f2e77ba70817df7e51b3603}
+      \strng{authorfullhash}{940dd6c89f2e77ba70817df7e51b3603}
+      \field{extraname}{15}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Neurology}
+      \field{number}{3}
+      \field{title}{Defining the clinical course of multiple sclerosis: the 2013 revisions}
+      \field{volume}{83}
+      \field{year}{2014}
+      \field{pages}{278\bibrangedash 286}
+      \range{pages}{9}
+    \endentry
+    \entry{Miller2012}{article}{}
+      \name{author}{1}{}{%
+        {{hash=85129e0c1c365706c5d3830545d07996}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Miller},
+           giveni={M\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{85129e0c1c365706c5d3830545d07996}
+      \strng{fullhash}{85129e0c1c365706c5d3830545d07996}
+      \strng{bibnamehash}{85129e0c1c365706c5d3830545d07996}
+      \strng{authorbibnamehash}{85129e0c1c365706c5d3830545d07996}
+      \strng{authornamehash}{85129e0c1c365706c5d3830545d07996}
+      \strng{authorfullhash}{85129e0c1c365706c5d3830545d07996}
+      \field{extraname}{16}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Lancet Neurology}
+      \field{number}{2}
+      \field{title}{Clinically isolated syndromes}
+      \field{volume}{11}
+      \field{year}{2012}
+      \field{pages}{157\bibrangedash 169}
+      \range{pages}{13}
+    \endentry
+    \entry{Filippi2016}{article}{}
+      \name{author}{1}{}{%
+        {{hash=6897aa3178356bdaa495bdcdcbfdf679}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Filippi},
+           giveni={F\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{6897aa3178356bdaa495bdcdcbfdf679}
+      \strng{fullhash}{6897aa3178356bdaa495bdcdcbfdf679}
+      \strng{bibnamehash}{6897aa3178356bdaa495bdcdcbfdf679}
+      \strng{authorbibnamehash}{6897aa3178356bdaa495bdcdcbfdf679}
+      \strng{authornamehash}{6897aa3178356bdaa495bdcdcbfdf679}
+      \strng{authorfullhash}{6897aa3178356bdaa495bdcdcbfdf679}
+      \field{extraname}{17}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Lancet Neurology}
+      \field{number}{3}
+      \field{title}{MRI criteria for the diagnosis of multiple sclerosis: MAGNIMS consensus guidelines}
+      \field{volume}{15}
+      \field{year}{2016}
+      \field{pages}{292\bibrangedash 303}
+      \range{pages}{12}
+    \endentry
+    \entry{Mahad2015}{article}{}
+      \name{author}{1}{}{%
+        {{hash=358b4137aa81b98d3fa248b191464510}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Mahad},
+           giveni={M\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{358b4137aa81b98d3fa248b191464510}
+      \strng{fullhash}{358b4137aa81b98d3fa248b191464510}
+      \strng{bibnamehash}{358b4137aa81b98d3fa248b191464510}
+      \strng{authorbibnamehash}{358b4137aa81b98d3fa248b191464510}
+      \strng{authornamehash}{358b4137aa81b98d3fa248b191464510}
+      \strng{authorfullhash}{358b4137aa81b98d3fa248b191464510}
+      \field{extraname}{18}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Lancet Neurology}
+      \field{number}{2}
+      \field{title}{Pathological mechanisms in progressive multiple sclerosis}
+      \field{volume}{14}
+      \field{year}{2015}
+      \field{pages}{183\bibrangedash 193}
+      \range{pages}{11}
+    \endentry
+    \entry{Montalban2017}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4d77f73db39df116fa3f471dbb684d9c}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Montalban},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{4d77f73db39df116fa3f471dbb684d9c}
+      \strng{fullhash}{4d77f73db39df116fa3f471dbb684d9c}
+      \strng{bibnamehash}{4d77f73db39df116fa3f471dbb684d9c}
+      \strng{authorbibnamehash}{4d77f73db39df116fa3f471dbb684d9c}
+      \strng{authornamehash}{4d77f73db39df116fa3f471dbb684d9c}
+      \strng{authorfullhash}{4d77f73db39df116fa3f471dbb684d9c}
+      \field{extraname}{1}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Brain}
+      \field{number}{11}
+      \field{title}{Primary progressive multiple sclerosis: a 5-year clinical and MR study}
+      \field{volume}{140}
+      \field{year}{2017}
+      \field{pages}{2814\bibrangedash 2819}
+      \range{pages}{6}
+    \endentry
+    \entry{Hauser2017}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4421a8bc931e246f6f751830f3f4d377}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Hauser},
+           giveni={H\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{4421a8bc931e246f6f751830f3f4d377}
+      \strng{fullhash}{4421a8bc931e246f6f751830f3f4d377}
+      \strng{bibnamehash}{4421a8bc931e246f6f751830f3f4d377}
+      \strng{authorbibnamehash}{4421a8bc931e246f6f751830f3f4d377}
+      \strng{authornamehash}{4421a8bc931e246f6f751830f3f4d377}
+      \strng{authorfullhash}{4421a8bc931e246f6f751830f3f4d377}
+      \field{extraname}{19}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{New England Journal of Medicine}
+      \field{number}{3}
+      \field{title}{Ocrelizumab versus placebo in primary progressive multiple sclerosis}
+      \field{volume}{376}
+      \field{year}{2017}
+      \field{pages}{209\bibrangedash 220}
+      \range{pages}{12}
+    \endentry
+    \entry{Filippi2019}{article}{}
+      \name{author}{1}{}{%
+        {{hash=6897aa3178356bdaa495bdcdcbfdf679}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Filippi},
+           giveni={F\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{6897aa3178356bdaa495bdcdcbfdf679}
+      \strng{fullhash}{6897aa3178356bdaa495bdcdcbfdf679}
+      \strng{bibnamehash}{6897aa3178356bdaa495bdcdcbfdf679}
+      \strng{authorbibnamehash}{6897aa3178356bdaa495bdcdcbfdf679}
+      \strng{authornamehash}{6897aa3178356bdaa495bdcdcbfdf679}
+      \strng{authorfullhash}{6897aa3178356bdaa495bdcdcbfdf679}
+      \field{extraname}{20}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Brain}
+      \field{number}{7}
+      \field{title}{Assessment of lesions on magnetic resonance imaging in multiple sclerosis: practical guidelines}
+      \field{volume}{142}
+      \field{year}{2019}
+      \field{pages}{1858\bibrangedash 1875}
+      \range{pages}{18}
+    \endentry
+    \entry{Thompson2018}{article}{}
+      \name{author}{1}{}{%
+        {{hash=46c29735a96adefe7d206a17909bd9f2}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Thompson},
+           giveni={T\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{46c29735a96adefe7d206a17909bd9f2}
+      \strng{fullhash}{46c29735a96adefe7d206a17909bd9f2}
+      \strng{bibnamehash}{46c29735a96adefe7d206a17909bd9f2}
+      \strng{authorbibnamehash}{46c29735a96adefe7d206a17909bd9f2}
+      \strng{authornamehash}{46c29735a96adefe7d206a17909bd9f2}
+      \strng{authorfullhash}{46c29735a96adefe7d206a17909bd9f2}
+      \field{extraname}{21}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Lancet Neurology}
+      \field{number}{2}
+      \field{title}{Diagnosis of multiple sclerosis: 2017 revisions of the McDonald criteria}
+      \field{volume}{17}
+      \field{year}{2018}
+      \field{pages}{162\bibrangedash 173}
+      \range{pages}{12}
+    \endentry
+    \entry{Geurts2012}{article}{}
+      \name{author}{1}{}{%
+        {{hash=e683a5ee3fab1ac4bb4f243f0b9ede23}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Geurts},
+           giveni={G\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{e683a5ee3fab1ac4bb4f243f0b9ede23}
+      \strng{fullhash}{e683a5ee3fab1ac4bb4f243f0b9ede23}
+      \strng{bibnamehash}{e683a5ee3fab1ac4bb4f243f0b9ede23}
+      \strng{authorbibnamehash}{e683a5ee3fab1ac4bb4f243f0b9ede23}
+      \strng{authornamehash}{e683a5ee3fab1ac4bb4f243f0b9ede23}
+      \strng{authorfullhash}{e683a5ee3fab1ac4bb4f243f0b9ede23}
+      \field{extraname}{22}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Lancet Neurology}
+      \field{number}{9}
+      \field{title}{Grey matter pathology in multiple sclerosis}
+      \field{volume}{11}
+      \field{year}{2012}
+      \field{pages}{840\bibrangedash 851}
+      \range{pages}{12}
+    \endentry
+    \entry{Ronneberger2015}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=fd393beb820c810ea00665897d80b3f0}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Ronneberger},
+           giveni={R\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{fd393beb820c810ea00665897d80b3f0}
+      \strng{fullhash}{fd393beb820c810ea00665897d80b3f0}
+      \strng{bibnamehash}{fd393beb820c810ea00665897d80b3f0}
+      \strng{authorbibnamehash}{fd393beb820c810ea00665897d80b3f0}
+      \strng{authornamehash}{fd393beb820c810ea00665897d80b3f0}
+      \strng{authorfullhash}{fd393beb820c810ea00665897d80b3f0}
+      \field{extraname}{23}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{MICCAI}
+      \field{title}{U-Net: Convolutional Networks for Biomedical Image Segmentation}
+      \field{year}{2015}
+      \field{pages}{234\bibrangedash 241}
+      \range{pages}{8}
+    \endentry
+    \entry{wahlig2023}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a5bad6840678c0ff9784db789305b6bb}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Stephen\bibnamedelimb G.\bibnamedelimi Wahlig},
+           giveni={S\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim W\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{a5bad6840678c0ff9784db789305b6bb}
+      \strng{fullhash}{a5bad6840678c0ff9784db789305b6bb}
+      \strng{bibnamehash}{a5bad6840678c0ff9784db789305b6bb}
+      \strng{authorbibnamehash}{a5bad6840678c0ff9784db789305b6bb}
+      \strng{authornamehash}{a5bad6840678c0ff9784db789305b6bb}
+      \strng{authorfullhash}{a5bad6840678c0ff9784db789305b6bb}
+      \field{extraname}{24}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Frontiers in Neuroscience}
+      \field{title}{3D U-Net for Automated Detection of Multiple Sclerosis Lesions: Utility of Transfer Learning from Other Pathologies}
+      \field{volume}{17}
+      \field{year}{2023}
+      \field{pages}{1188336}
+      \range{pages}{1}
+    \endentry
+    \entry{turn0search12}{article}{}
+      \name{author}{1}{}{%
+        {{hash=f698d05dfe5d502c5a32c848f0cd9fc7}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Rohit\bibnamedelima Bakshi},
+           giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{f698d05dfe5d502c5a32c848f0cd9fc7}
+      \strng{fullhash}{f698d05dfe5d502c5a32c848f0cd9fc7}
+      \strng{bibnamehash}{f698d05dfe5d502c5a32c848f0cd9fc7}
+      \strng{authorbibnamehash}{f698d05dfe5d502c5a32c848f0cd9fc7}
+      \strng{authornamehash}{f698d05dfe5d502c5a32c848f0cd9fc7}
+      \strng{authorfullhash}{f698d05dfe5d502c5a32c848f0cd9fc7}
+      \field{extraname}{25}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Lancet Neurology}
+      \field{title}{MRI in multiple sclerosis: current status and future prospects}
+      \field{year}{2023}
+    \endentry
+    \entry{Tallantyre2019}{article}{}
+      \name{author}{1}{}{%
+        {{hash=7080c4567b9eb770a6ec6e6fd034c247}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Tallantyre},
+           giveni={T\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{7080c4567b9eb770a6ec6e6fd034c247}
+      \strng{fullhash}{7080c4567b9eb770a6ec6e6fd034c247}
+      \strng{bibnamehash}{7080c4567b9eb770a6ec6e6fd034c247}
+      \strng{authorbibnamehash}{7080c4567b9eb770a6ec6e6fd034c247}
+      \strng{authornamehash}{7080c4567b9eb770a6ec6e6fd034c247}
+      \strng{authorfullhash}{7080c4567b9eb770a6ec6e6fd034c247}
+      \field{extraname}{26}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Brain}
+      \field{number}{6}
+      \field{title}{Ultra-high-field imaging distinguishes MS lesions from asymptomatic white matter lesions}
+      \field{volume}{142}
+      \field{year}{2019}
+      \field{pages}{1581\bibrangedash 1595}
+      \range{pages}{15}
+    \endentry
+    \entry{Sastre-Garriga2018}{article}{}
+      \name{author}{1}{}{%
+        {{hash=9f17e866039da2253ed913d6b923f230}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Sastre-Garriga},
+           giveni={S\bibinithyphendelim G\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{9f17e866039da2253ed913d6b923f230}
+      \strng{fullhash}{9f17e866039da2253ed913d6b923f230}
+      \strng{bibnamehash}{9f17e866039da2253ed913d6b923f230}
+      \strng{authorbibnamehash}{9f17e866039da2253ed913d6b923f230}
+      \strng{authornamehash}{9f17e866039da2253ed913d6b923f230}
+      \strng{authorfullhash}{9f17e866039da2253ed913d6b923f230}
+      \field{extraname}{27}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Neurology: Clinical Practice}
+      \field{number}{4}
+      \field{title}{Advanced MRI in multiple sclerosis: current status and future challenges}
+      \field{volume}{8}
+      \field{year}{2018}
+      \field{pages}{332\bibrangedash 341}
+      \range{pages}{10}
+    \endentry
+    \entry{Absinta2019}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c46dc0833ff74d5e92ec0ad7dd6f32e4}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Absinta},
+           giveni={A\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{c46dc0833ff74d5e92ec0ad7dd6f32e4}
+      \strng{fullhash}{c46dc0833ff74d5e92ec0ad7dd6f32e4}
+      \strng{bibnamehash}{c46dc0833ff74d5e92ec0ad7dd6f32e4}
+      \strng{authorbibnamehash}{c46dc0833ff74d5e92ec0ad7dd6f32e4}
+      \strng{authornamehash}{c46dc0833ff74d5e92ec0ad7dd6f32e4}
+      \strng{authorfullhash}{c46dc0833ff74d5e92ec0ad7dd6f32e4}
+      \field{extraname}{28}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{JAMA Neurology}
+      \field{number}{10}
+      \field{title}{Leptomeningeal gadolinium enhancement across multiple sclerosis disease stages}
+      \field{volume}{76}
+      \field{year}{2019}
+      \field{pages}{1216\bibrangedash 1224}
+      \range{pages}{9}
+    \endentry
+    \entry{Kearney2015}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ff01d6f8366dd37d2fbf3484312c4582}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Kearney},
+           giveni={K\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{ff01d6f8366dd37d2fbf3484312c4582}
+      \strng{fullhash}{ff01d6f8366dd37d2fbf3484312c4582}
+      \strng{bibnamehash}{ff01d6f8366dd37d2fbf3484312c4582}
+      \strng{authorbibnamehash}{ff01d6f8366dd37d2fbf3484312c4582}
+      \strng{authornamehash}{ff01d6f8366dd37d2fbf3484312c4582}
+      \strng{authorfullhash}{ff01d6f8366dd37d2fbf3484312c4582}
+      \field{extraname}{29}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{NeuroImage}
+      \field{title}{Spinal cord MRI in multiple sclerosis: diagnostic and prognostic value}
+      \field{volume}{120}
+      \field{year}{2015}
+      \field{pages}{1\bibrangedash 10}
+      \range{pages}{10}
+    \endentry
+    \entry{wattjes2021magnims}{article}{}
+      \name{author}{1}{}{%
+        {{hash=8f352a9b46663e78e1bd65c81a21cfcd}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Wattjes},
+           giveni={W\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{8f352a9b46663e78e1bd65c81a21cfcd}
+      \strng{fullhash}{8f352a9b46663e78e1bd65c81a21cfcd}
+      \strng{bibnamehash}{8f352a9b46663e78e1bd65c81a21cfcd}
+      \strng{authorbibnamehash}{8f352a9b46663e78e1bd65c81a21cfcd}
+      \strng{authornamehash}{8f352a9b46663e78e1bd65c81a21cfcd}
+      \strng{authorfullhash}{8f352a9b46663e78e1bd65c81a21cfcd}
+      \field{extraname}{30}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Lancet Neurology}
+      \field{number}{8}
+      \field{title}{MAGNIMS-CMSC-NAIMS consensus recommendations on the use of MRI in multiple sclerosis—clinical practice and research}
+      \field{volume}{20}
+      \field{year}{2021}
+      \field{pages}{653\bibrangedash 670}
+      \range{pages}{18}
+    \endentry
+    \entry{kaunzner2020mri}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ee78b035d40f4633116f9bf834fc6de7}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Kaunzner},
+           giveni={K\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{ee78b035d40f4633116f9bf834fc6de7}
+      \strng{fullhash}{ee78b035d40f4633116f9bf834fc6de7}
+      \strng{bibnamehash}{ee78b035d40f4633116f9bf834fc6de7}
+      \strng{authorbibnamehash}{ee78b035d40f4633116f9bf834fc6de7}
+      \strng{authornamehash}{ee78b035d40f4633116f9bf834fc6de7}
+      \strng{authorfullhash}{ee78b035d40f4633116f9bf834fc6de7}
+      \field{extraname}{31}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Neuroimaging Clinics of North America}
+      \field{number}{4}
+      \field{title}{MRI in the assessment and monitoring of multiple sclerosis in the era of disease-modifying therapies}
+      \field{volume}{30}
+      \field{year}{2020}
+      \field{pages}{587\bibrangedash 602}
+      \range{pages}{16}
+    \endentry
+    \entry{Khalil2021}{article}{}
+      \name{author}{1}{}{%
+        {{hash=87155e58a85110f2ccb28abac031b67e}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Khalil},
+           giveni={K\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{87155e58a85110f2ccb28abac031b67e}
+      \strng{fullhash}{87155e58a85110f2ccb28abac031b67e}
+      \strng{bibnamehash}{87155e58a85110f2ccb28abac031b67e}
+      \strng{authorbibnamehash}{87155e58a85110f2ccb28abac031b67e}
+      \strng{authornamehash}{87155e58a85110f2ccb28abac031b67e}
+      \strng{authorfullhash}{87155e58a85110f2ccb28abac031b67e}
+      \field{extraname}{32}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Reviews Neurology}
+      \field{number}{6}
+      \field{title}{Neurofilaments as biomarkers in neurological disorders}
+      \field{volume}{17}
+      \field{year}{2021}
+      \field{pages}{348\bibrangedash 362}
+      \range{pages}{15}
+    \endentry
+    \entry{Wingerchuk2015}{article}{}
+      \name{author}{1}{}{%
+        {{hash=fe54bf6979b0cec2f0c4eeaff31fbd41}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Wingerchuk},
+           giveni={W\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{fe54bf6979b0cec2f0c4eeaff31fbd41}
+      \strng{fullhash}{fe54bf6979b0cec2f0c4eeaff31fbd41}
+      \strng{bibnamehash}{fe54bf6979b0cec2f0c4eeaff31fbd41}
+      \strng{authorbibnamehash}{fe54bf6979b0cec2f0c4eeaff31fbd41}
+      \strng{authornamehash}{fe54bf6979b0cec2f0c4eeaff31fbd41}
+      \strng{authorfullhash}{fe54bf6979b0cec2f0c4eeaff31fbd41}
+      \field{extraname}{33}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Neurology}
+      \field{number}{2}
+      \field{title}{International consensus diagnostic criteria for neuromyelitis optica spectrum disorders}
+      \field{volume}{85}
+      \field{year}{2015}
+      \field{pages}{177\bibrangedash 189}
+      \range{pages}{13}
+    \endentry
+    \entry{Deisenhammer2019}{article}{}
+      \name{author}{1}{}{%
+        {{hash=aed43a38ef0f247f13c9980c8777c072}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Deisenhammer},
+           giveni={D\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{aed43a38ef0f247f13c9980c8777c072}
+      \strng{fullhash}{aed43a38ef0f247f13c9980c8777c072}
+      \strng{bibnamehash}{aed43a38ef0f247f13c9980c8777c072}
+      \strng{authorbibnamehash}{aed43a38ef0f247f13c9980c8777c072}
+      \strng{authornamehash}{aed43a38ef0f247f13c9980c8777c072}
+      \strng{authorfullhash}{aed43a38ef0f247f13c9980c8777c072}
+      \field{extraname}{34}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Frontiers in Immunology}
+      \field{title}{The cerebrospinal fluid in multiple sclerosis}
+      \field{volume}{10}
+      \field{year}{2019}
+      \field{pages}{726}
+      \range{pages}{1}
+    \endentry
+    \entry{Solomon2016}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4e33590e52a7ba30545feebbaf19c6e7}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Solomon},
+           giveni={S\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{4e33590e52a7ba30545feebbaf19c6e7}
+      \strng{fullhash}{4e33590e52a7ba30545feebbaf19c6e7}
+      \strng{bibnamehash}{4e33590e52a7ba30545feebbaf19c6e7}
+      \strng{authorbibnamehash}{4e33590e52a7ba30545feebbaf19c6e7}
+      \strng{authornamehash}{4e33590e52a7ba30545feebbaf19c6e7}
+      \strng{authorfullhash}{4e33590e52a7ba30545feebbaf19c6e7}
+      \field{extraname}{35}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Neurology}
+      \field{number}{13}
+      \field{title}{The contemporary spectrum of multiple sclerosis misdiagnosis}
+      \field{volume}{87}
+      \field{year}{2016}
+      \field{pages}{1393\bibrangedash 1399}
+      \range{pages}{7}
+    \endentry
+    \entry{Brownlee2019}{article}{}
+      \name{author}{1}{}{%
+        {{hash=6c77a52e1bac3e340b21a547cbb47ac2}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Brownlee},
+           giveni={B\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{6c77a52e1bac3e340b21a547cbb47ac2}
+      \strng{fullhash}{6c77a52e1bac3e340b21a547cbb47ac2}
+      \strng{bibnamehash}{6c77a52e1bac3e340b21a547cbb47ac2}
+      \strng{authorbibnamehash}{6c77a52e1bac3e340b21a547cbb47ac2}
+      \strng{authornamehash}{6c77a52e1bac3e340b21a547cbb47ac2}
+      \strng{authorfullhash}{6c77a52e1bac3e340b21a547cbb47ac2}
+      \field{extraname}{36}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Multiple Sclerosis Journal}
+      \field{number}{7}
+      \field{title}{Misdiagnosis of multiple sclerosis: time for action}
+      \field{volume}{25}
+      \field{year}{2019}
+      \field{pages}{979\bibrangedash 981}
+      \range{pages}{3}
+    \endentry
+    \entry{BenDhifallah2024}{article}{}
+      \name{author}{1}{}{%
+        {{hash=2a3a63da76a43f5c9817236141cc11b6}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Ben\bibnamedelimb Dhifallah\bibnamedelima Montassar},
+           giveni={B\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim M\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{2a3a63da76a43f5c9817236141cc11b6}
+      \strng{fullhash}{2a3a63da76a43f5c9817236141cc11b6}
+      \strng{bibnamehash}{2a3a63da76a43f5c9817236141cc11b6}
+      \strng{authorbibnamehash}{2a3a63da76a43f5c9817236141cc11b6}
+      \strng{authornamehash}{2a3a63da76a43f5c9817236141cc11b6}
+      \strng{authorfullhash}{2a3a63da76a43f5c9817236141cc11b6}
+      \field{extraname}{37}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Medical Information Computing Communications in Computer and Information Science}
+      \field{title}{Explainable Few-Shot Learning for Multiple Sclerosis Detection in Low-Data Regime}
+      \field{year}{2025}
+    \endentry
+    \entry{tustison2010n4itk}{article}{}
+      \name{author}{1}{}{%
+        {{hash=8b7421d7072019baa89ed2f132a49d70}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Tustison},
+           giveni={T\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{8b7421d7072019baa89ed2f132a49d70}
+      \strng{fullhash}{8b7421d7072019baa89ed2f132a49d70}
+      \strng{bibnamehash}{8b7421d7072019baa89ed2f132a49d70}
+      \strng{authorbibnamehash}{8b7421d7072019baa89ed2f132a49d70}
+      \strng{authornamehash}{8b7421d7072019baa89ed2f132a49d70}
+      \strng{authorfullhash}{8b7421d7072019baa89ed2f132a49d70}
+      \field{extraname}{38}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Medical Imaging}
+      \field{number}{6}
+      \field{title}{N4ITK: improved N3 bias correction}
+      \field{volume}{29}
+      \field{year}{2010}
+      \field{pages}{1310\bibrangedash 1320}
+      \range{pages}{11}
+    \endentry
+    \entry{bias}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=f93140d91f91e02578573e8fe8afe86b}{%
+           family={M},
+           familyi={M\bibinitperiod},
+           given={Roberto\bibnamedelima Alejandro},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f93140d91f91e02578573e8fe8afe86b}
+      \strng{fullhash}{f93140d91f91e02578573e8fe8afe86b}
+      \strng{bibnamehash}{f93140d91f91e02578573e8fe8afe86b}
+      \strng{authorbibnamehash}{f93140d91f91e02578573e8fe8afe86b}
+      \strng{authornamehash}{f93140d91f91e02578573e8fe8afe86b}
+      \strng{authorfullhash}{f93140d91f91e02578573e8fe8afe86b}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{How to do Bias Field Correction with Python}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://medium.com/@alexandro.ramr777/how-to-do-bias-field-correction-with-python-156b9d51dd79
+      \endverb
+      \verb{url}
+      \verb https://medium.com/@alexandro.ramr777/how-to-do-bias-field-correction-with-python-156b9d51dd79
+      \endverb
+    \endentry
+    \entry{smith2002fast}{article}{}
+      \name{author}{1}{}{%
+        {{hash=0d08800ae38e80bd490f67687ab7c5b9}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Smith},
+           giveni={S\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{0d08800ae38e80bd490f67687ab7c5b9}
+      \strng{fullhash}{0d08800ae38e80bd490f67687ab7c5b9}
+      \strng{bibnamehash}{0d08800ae38e80bd490f67687ab7c5b9}
+      \strng{authorbibnamehash}{0d08800ae38e80bd490f67687ab7c5b9}
+      \strng{authornamehash}{0d08800ae38e80bd490f67687ab7c5b9}
+      \strng{authorfullhash}{0d08800ae38e80bd490f67687ab7c5b9}
+      \field{extraname}{39}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Human Brain Mapping}
+      \field{number}{3}
+      \field{title}{Fast robust automated brain extraction}
+      \field{volume}{17}
+      \field{year}{2002}
+      \field{pages}{143\bibrangedash 155}
+      \range{pages}{13}
+    \endentry
+    \entry{skull}{article}{}
+      \name{author}{1}{}{%
+        {{hash=93ad5d6a1d89729ed90af05625933078}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={M.\bibnamedelimi Parsa\bibnamedelima Hosseini},
+           giveni={M\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim H\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{93ad5d6a1d89729ed90af05625933078}
+      \strng{fullhash}{93ad5d6a1d89729ed90af05625933078}
+      \strng{bibnamehash}{93ad5d6a1d89729ed90af05625933078}
+      \strng{authorbibnamehash}{93ad5d6a1d89729ed90af05625933078}
+      \strng{authornamehash}{93ad5d6a1d89729ed90af05625933078}
+      \strng{authorfullhash}{93ad5d6a1d89729ed90af05625933078}
+      \field{extraname}{40}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Automatic and Manual Segmentation of Hippocampus in Epileptic Patients MRI}
+      \field{year}{2015}
+    \endentry
+    \entry{shinohara2021impact}{article}{}
+      \name{author}{1}{}{%
+        {{hash=065562431090541956b808bcd1862e0b}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Shinohara},
+           giveni={S\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{065562431090541956b808bcd1862e0b}
+      \strng{fullhash}{065562431090541956b808bcd1862e0b}
+      \strng{bibnamehash}{065562431090541956b808bcd1862e0b}
+      \strng{authorbibnamehash}{065562431090541956b808bcd1862e0b}
+      \strng{authornamehash}{065562431090541956b808bcd1862e0b}
+      \strng{authorfullhash}{065562431090541956b808bcd1862e0b}
+      \field{extraname}{41}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Medical Physics}
+      \field{number}{6}
+      \field{title}{Impact of preprocessing and harmonization methods on the reproducibility of brain MRI radiomic features}
+      \field{volume}{48}
+      \field{year}{2021}
+      \field{pages}{2862\bibrangedash 2874}
+      \range{pages}{13}
+    \endentry
+    \entry{manjon2010adaptive}{article}{}
+      \name{author}{1}{}{%
+        {{hash=99840b44f792a9607cbea45c839c81d8}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Manjón},
+           giveni={M\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{99840b44f792a9607cbea45c839c81d8}
+      \strng{fullhash}{99840b44f792a9607cbea45c839c81d8}
+      \strng{bibnamehash}{99840b44f792a9607cbea45c839c81d8}
+      \strng{authorbibnamehash}{99840b44f792a9607cbea45c839c81d8}
+      \strng{authornamehash}{99840b44f792a9607cbea45c839c81d8}
+      \strng{authorfullhash}{99840b44f792a9607cbea45c839c81d8}
+      \field{extraname}{42}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Magnetic Resonance Imaging}
+      \field{number}{1}
+      \field{title}{Adaptive non-local means denoising of MR images with spatially varying noise levels}
+      \field{volume}{31}
+      \field{year}{2010}
+      \field{pages}{192\bibrangedash 203}
+      \range{pages}{12}
+    \endentry
+    \entry{ghazvanchahi2023effect}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d38d8639906008e3952872f8062b8509}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Ghazvanchahi},
+           giveni={G\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{d38d8639906008e3952872f8062b8509}
+      \strng{fullhash}{d38d8639906008e3952872f8062b8509}
+      \strng{bibnamehash}{d38d8639906008e3952872f8062b8509}
+      \strng{authorbibnamehash}{d38d8639906008e3952872f8062b8509}
+      \strng{authornamehash}{d38d8639906008e3952872f8062b8509}
+      \strng{authorfullhash}{d38d8639906008e3952872f8062b8509}
+      \field{extraname}{43}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2307.03827}
+      \field{title}{Effect of Intensity Standardization on Deep Learning for WML Segmentation in Multi-Centre FLAIR MRI}
+      \field{year}{2023}
+    \endentry
+    \entry{normal}{article}{}
+      \name{author}{1}{}{%
+        {{hash=dd45cb2d301705861724d8c98451ced0}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={X.\bibnamedelimi Sun},
+           giveni={X\bibinitperiod\bibinitdelim S\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{dd45cb2d301705861724d8c98451ced0}
+      \strng{fullhash}{dd45cb2d301705861724d8c98451ced0}
+      \strng{bibnamehash}{dd45cb2d301705861724d8c98451ced0}
+      \strng{authorbibnamehash}{dd45cb2d301705861724d8c98451ced0}
+      \strng{authornamehash}{dd45cb2d301705861724d8c98451ced0}
+      \strng{authorfullhash}{dd45cb2d301705861724d8c98451ced0}
+      \field{extraname}{44}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{BioMedical Engineering Online}
+      \field{title}{Histogram-based normalization technique on human brain magnetic resonance images from different acquisitions}
+      \field{year}{2015}
+    \endentry
+    \entry{ismail2024}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c7a05ed9bc702e6027c3abf77e2a0d43}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Abdrabou\bibnamedelima Ismail},
+           giveni={A\bibinitperiod\bibinitdelim I\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{c7a05ed9bc702e6027c3abf77e2a0d43}
+      \strng{fullhash}{c7a05ed9bc702e6027c3abf77e2a0d43}
+      \strng{bibnamehash}{c7a05ed9bc702e6027c3abf77e2a0d43}
+      \strng{authorbibnamehash}{c7a05ed9bc702e6027c3abf77e2a0d43}
+      \strng{authornamehash}{c7a05ed9bc702e6027c3abf77e2a0d43}
+      \strng{authorfullhash}{c7a05ed9bc702e6027c3abf77e2a0d43}
+      \field{extraname}{45}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Medical Imaging}
+      \field{number}{2}
+      \field{title}{A Multi-modality-based Multiple Sclerosis Detection Model}
+      \field{volume}{11}
+      \field{year}{2024}
+      \field{pages}{025001}
+      \range{pages}{1}
+    \endentry
+    \entry{RussellNorvig2021}{book}{}
+      \name{author}{2}{}{%
+        {{hash=c451164a0a4a9471276b7e4fb5a8cbd6}{%
+           family={Russell},
+           familyi={R\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=3b036468531df77415a71361fc4468a9}{%
+           family={Norvig},
+           familyi={N\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Pearson}%
+      }
+      \strng{namehash}{628742b6762a1d5d05413dc214b6af25}
+      \strng{fullhash}{2ea43eeb0980020038a4ab78060da162}
+      \strng{bibnamehash}{2ea43eeb0980020038a4ab78060da162}
+      \strng{authorbibnamehash}{2ea43eeb0980020038a4ab78060da162}
+      \strng{authornamehash}{628742b6762a1d5d05413dc214b6af25}
+      \strng{authorfullhash}{2ea43eeb0980020038a4ab78060da162}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{4th}
+      \field{title}{Artificial Intelligence: A Modern Approach}
+      \field{year}{2021}
+    \endentry
+    \entry{JordanMitchell2015}{article}{}
+      \name{author}{2}{}{%
+        {{hash=0442c01fb14007ee1da9ccea3dfe2597}{%
+           family={Jordan},
+           familyi={J\bibinitperiod},
+           given={M.\bibnamedelimi I.},
+           giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=ef989624fe8cf86408cbf3a495f2a157}{%
+           family={Mitchell},
+           familyi={M\bibinitperiod},
+           given={T.\bibnamedelimi M.},
+           giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{fa6985bc44caa5e201f9fa7684d27e64}
+      \strng{fullhash}{570a991cbacc308e99406e1187465552}
+      \strng{bibnamehash}{570a991cbacc308e99406e1187465552}
+      \strng{authorbibnamehash}{570a991cbacc308e99406e1187465552}
+      \strng{authornamehash}{fa6985bc44caa5e201f9fa7684d27e64}
+      \strng{authorfullhash}{570a991cbacc308e99406e1187465552}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Science}
+      \field{number}{6245}
+      \field{title}{Machine learning: Trends, perspectives, and prospects}
+      \field{volume}{349}
+      \field{year}{2015}
+      \field{pages}{255\bibrangedash 260}
+      \range{pages}{6}
+    \endentry
+    \entry{anitha2024}{article}{}
+      \name{author}{1}{}{%
+        {{hash=70b4f8443e34c547c3012826a291ddeb}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Anitha},
+           giveni={A\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{70b4f8443e34c547c3012826a291ddeb}
+      \strng{fullhash}{70b4f8443e34c547c3012826a291ddeb}
+      \strng{bibnamehash}{70b4f8443e34c547c3012826a291ddeb}
+      \strng{authorbibnamehash}{70b4f8443e34c547c3012826a291ddeb}
+      \strng{authornamehash}{70b4f8443e34c547c3012826a291ddeb}
+      \strng{authorfullhash}{70b4f8443e34c547c3012826a291ddeb}
+      \field{extraname}{46}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Healthcare Engineering}
+      \field{title}{AI-Driven Diagnostics: Comparative Analysis of Machine Learning and Deep Learning Approaches in Multiple Sclerosis Diagnostics}
+      \field{volume}{2024}
+      \field{year}{2024}
+    \endentry
+    \entry{zhang2023}{article}{}
+      \name{author}{1}{}{%
+        {{hash=1893583f024d74ac6bf866c1c10648c9}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Zhang},
+           giveni={Z\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{1893583f024d74ac6bf866c1c10648c9}
+      \strng{fullhash}{1893583f024d74ac6bf866c1c10648c9}
+      \strng{bibnamehash}{1893583f024d74ac6bf866c1c10648c9}
+      \strng{authorbibnamehash}{1893583f024d74ac6bf866c1c10648c9}
+      \strng{authornamehash}{1893583f024d74ac6bf866c1c10648c9}
+      \strng{authorfullhash}{1893583f024d74ac6bf866c1c10648c9}
+      \field{extraname}{47}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Frontiers in Neuroscience}
+      \field{title}{Predicting Multiple Sclerosis Severity with Multimodal Deep Neural Networks}
+      \field{volume}{17}
+      \field{year}{2023}
+      \field{pages}{234}
+      \range{pages}{1}
+    \endentry
+    \entry{Krizhevsky2017}{article}{}
+      \name{author}{1}{}{%
+        {{hash=23b8dd2e83eed96fc71ba55662e28805}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Krizhevsky},
+           giveni={K\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{23b8dd2e83eed96fc71ba55662e28805}
+      \strng{fullhash}{23b8dd2e83eed96fc71ba55662e28805}
+      \strng{bibnamehash}{23b8dd2e83eed96fc71ba55662e28805}
+      \strng{authorbibnamehash}{23b8dd2e83eed96fc71ba55662e28805}
+      \strng{authornamehash}{23b8dd2e83eed96fc71ba55662e28805}
+      \strng{authorfullhash}{23b8dd2e83eed96fc71ba55662e28805}
+      \field{extraname}{48}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Communications of the ACM}
+      \field{number}{6}
+      \field{title}{ImageNet classification with deep convolutional neural networks}
+      \field{volume}{60}
+      \field{year}{2017}
+      \field{pages}{84\bibrangedash 90}
+      \range{pages}{7}
+    \endentry
+    \entry{cnn}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=7a6b46d1a5a3cbfca4900eaac3fafafa}{%
+           family={Gurucharan},
+           familyi={G\bibinitperiod},
+           given={M.\bibnamedelimi K.},
+           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{7a6b46d1a5a3cbfca4900eaac3fafafa}
+      \strng{fullhash}{7a6b46d1a5a3cbfca4900eaac3fafafa}
+      \strng{bibnamehash}{7a6b46d1a5a3cbfca4900eaac3fafafa}
+      \strng{authorbibnamehash}{7a6b46d1a5a3cbfca4900eaac3fafafa}
+      \strng{authornamehash}{7a6b46d1a5a3cbfca4900eaac3fafafa}
+      \strng{authorfullhash}{7a6b46d1a5a3cbfca4900eaac3fafafa}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 07/05/2025}
+      \field{title}{Basic {CNN} Architecture: {A} Detailed Explanation of the 5 Layers in Convolutional Neural Networks}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.upgrad.com/blog/basic-cnn-architecture/
+      \endverb
+      \verb{url}
+      \verb https://www.upgrad.com/blog/basic-cnn-architecture/
+      \endverb
+    \endentry
+    \entry{Huang2017}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=8d6f40fff060226204f2fa8bbed0e370}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Huang},
+           giveni={H\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{8d6f40fff060226204f2fa8bbed0e370}
+      \strng{fullhash}{8d6f40fff060226204f2fa8bbed0e370}
+      \strng{bibnamehash}{8d6f40fff060226204f2fa8bbed0e370}
+      \strng{authorbibnamehash}{8d6f40fff060226204f2fa8bbed0e370}
+      \strng{authornamehash}{8d6f40fff060226204f2fa8bbed0e370}
+      \strng{authorfullhash}{8d6f40fff060226204f2fa8bbed0e370}
+      \field{extraname}{49}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{CVPR 2017}
+      \field{title}{Densely Connected Convolutional Networks}
+      \field{year}{2017}
+      \field{pages}{4700\bibrangedash 4708}
+      \range{pages}{9}
+    \endentry
+    \entry{dense}{article}{}
+      \name{author}{2}{}{%
+        {{hash=fd4bba7c75f3866bc78234222be9ea33}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Qiang},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=fd4bba7c75f3866bc78234222be9ea33}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Qiang},
+           giveni={Q\bibinitperiod}}}%
+      }
+      \strng{namehash}{1306723a85db6d28491a6ba6593fba4b}
+      \strng{fullhash}{e346ba5f83123d440dc60e14ccb51fd4}
+      \strng{bibnamehash}{e346ba5f83123d440dc60e14ccb51fd4}
+      \strng{authorbibnamehash}{e346ba5f83123d440dc60e14ccb51fd4}
+      \strng{authornamehash}{1306723a85db6d28491a6ba6593fba4b}
+      \strng{authorfullhash}{e346ba5f83123d440dc60e14ccb51fd4}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Scientific Reports}
+      \field{title}{Deep learning based automated diagnosis of bone metastases with {SPECT} thoracic bone images}
+      \field{year}{2021}
+    \endentry
+    \entry{He2016}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=498c8abb7fcffb9baee5f45408b2323e}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Kaiming\bibnamedelima He},
+           giveni={K\bibinitperiod\bibinitdelim H\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{498c8abb7fcffb9baee5f45408b2323e}
+      \strng{fullhash}{498c8abb7fcffb9baee5f45408b2323e}
+      \strng{bibnamehash}{498c8abb7fcffb9baee5f45408b2323e}
+      \strng{authorbibnamehash}{498c8abb7fcffb9baee5f45408b2323e}
+      \strng{authornamehash}{498c8abb7fcffb9baee5f45408b2323e}
+      \strng{authorfullhash}{498c8abb7fcffb9baee5f45408b2323e}
+      \field{extraname}{50}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}
+      \field{title}{Deep Residual Learning for Image Recognition}
+      \field{year}{2016}
+      \field{pages}{770\bibrangedash 778}
+      \range{pages}{9}
+    \endentry
+    \entry{nicolaou2023}{article}{}
+      \name{author}{1}{}{%
+        {{hash=e8ad6752be648e21e32173606d8d8923}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Nicolaou},
+           giveni={N\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{e8ad6752be648e21e32173606d8d8923}
+      \strng{fullhash}{e8ad6752be648e21e32173606d8d8923}
+      \strng{bibnamehash}{e8ad6752be648e21e32173606d8d8923}
+      \strng{authorbibnamehash}{e8ad6752be648e21e32173606d8d8923}
+      \strng{authornamehash}{e8ad6752be648e21e32173606d8d8923}
+      \strng{authorfullhash}{e8ad6752be648e21e32173606d8d8923}
+      \field{extraname}{51}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Medical Imaging and Radiation Oncology}
+      \field{title}{An Explainable AI Model in the Assessment of Multiple Sclerosis Using Clinical Data and Brain MRI Lesion Texture Features}
+      \field{volume}{67}
+      \field{year}{2023}
+      \field{pages}{115\bibrangedash 123}
+      \range{pages}{9}
+    \endentry
+    \entry{cruciani2021}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c399e884b22450a8ed5a279ef407aff2}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Cruciani},
+           giveni={C\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{c399e884b22450a8ed5a279ef407aff2}
+      \strng{fullhash}{c399e884b22450a8ed5a279ef407aff2}
+      \strng{bibnamehash}{c399e884b22450a8ed5a279ef407aff2}
+      \strng{authorbibnamehash}{c399e884b22450a8ed5a279ef407aff2}
+      \strng{authornamehash}{c399e884b22450a8ed5a279ef407aff2}
+      \strng{authorfullhash}{c399e884b22450a8ed5a279ef407aff2}
+      \field{extraname}{52}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{NeuroImage}
+      \field{title}{Explainable 3D-CNN for Multiple Sclerosis Patients Stratification}
+      \field{volume}{224}
+      \field{year}{2021}
+      \field{pages}{117422}
+      \range{pages}{1}
+    \endentry
+    \entry{Lassmann2018}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a3ea4aec4a9c2333997ce25be7550f2f}{%
+           family={Lassmann},
+           familyi={L\bibinitperiod},
+           given={Hans},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{a3ea4aec4a9c2333997ce25be7550f2f}
+      \strng{fullhash}{a3ea4aec4a9c2333997ce25be7550f2f}
+      \strng{bibnamehash}{a3ea4aec4a9c2333997ce25be7550f2f}
+      \strng{authorbibnamehash}{a3ea4aec4a9c2333997ce25be7550f2f}
+      \strng{authornamehash}{a3ea4aec4a9c2333997ce25be7550f2f}
+      \strng{authorfullhash}{a3ea4aec4a9c2333997ce25be7550f2f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cold Spring Harbor Perspectives in Medicine}
+      \field{number}{3}
+      \field{title}{Multiple sclerosis pathology}
+      \field{volume}{8}
+      \field{year}{2018}
+      \field{pages}{a028936}
+      \range{pages}{-1}
+    \endentry
+    \entry{raab2020}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a8d49368b821cfefa3185b8e05c930bf}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Raab},
+           giveni={R\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{a8d49368b821cfefa3185b8e05c930bf}
+      \strng{fullhash}{a8d49368b821cfefa3185b8e05c930bf}
+      \strng{bibnamehash}{a8d49368b821cfefa3185b8e05c930bf}
+      \strng{authorbibnamehash}{a8d49368b821cfefa3185b8e05c930bf}
+      \strng{authornamehash}{a8d49368b821cfefa3185b8e05c930bf}
+      \strng{authorfullhash}{a8d49368b821cfefa3185b8e05c930bf}
+      \field{extraname}{53}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Neuroinformatics}
+      \field{title}{A Multimodal 2D Convolutional Neural Network for Multiple Sclerosis Lesion Detection}
+      \field{volume}{18}
+      \field{year}{2020}
+      \field{pages}{391\bibrangedash 403}
+      \range{pages}{13}
+    \endentry
+    \entry{raab2023}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a8d49368b821cfefa3185b8e05c930bf}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Raab},
+           giveni={R\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{a8d49368b821cfefa3185b8e05c930bf}
+      \strng{fullhash}{a8d49368b821cfefa3185b8e05c930bf}
+      \strng{bibnamehash}{a8d49368b821cfefa3185b8e05c930bf}
+      \strng{authorbibnamehash}{a8d49368b821cfefa3185b8e05c930bf}
+      \strng{authornamehash}{a8d49368b821cfefa3185b8e05c930bf}
+      \strng{authorfullhash}{a8d49368b821cfefa3185b8e05c930bf}
+      \field{extraname}{54}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Neuroscience Methods}
+      \field{title}{Investigation of an Efficient Multi-modal Convolutional Neural Network for Multiple Sclerosis Lesion Detection}
+      \field{volume}{373}
+      \field{year}{2023}
+      \field{pages}{109758}
+      \range{pages}{1}
+    \endentry
+    \entry{kim2020}{article}{}
+      \name{author}{1}{}{%
+        {{hash=dae64fb90bf3905b7fd5a2f7f0924a06}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Kim},
+           giveni={K\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{dae64fb90bf3905b7fd5a2f7f0924a06}
+      \strng{fullhash}{dae64fb90bf3905b7fd5a2f7f0924a06}
+      \strng{bibnamehash}{dae64fb90bf3905b7fd5a2f7f0924a06}
+      \strng{authorbibnamehash}{dae64fb90bf3905b7fd5a2f7f0924a06}
+      \strng{authornamehash}{dae64fb90bf3905b7fd5a2f7f0924a06}
+      \strng{authorfullhash}{dae64fb90bf3905b7fd5a2f7f0924a06}
+      \field{extraname}{55}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Medical Imaging}
+      \field{number}{4}
+      \field{title}{Multimodal Image Analysis for Assessing Multiple Sclerosis and Future Prospects Powered by Artificial Intelligence}
+      \field{volume}{7}
+      \field{year}{2020}
+      \field{pages}{044501}
+      \range{pages}{1}
+    \endentry
+    \entry{khattap2025}{article}{}
+      \name{author}{1}{}{%
+        {{hash=02021159f8960aa4b039c5fc10b1386e}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Khattap},
+           giveni={K\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{02021159f8960aa4b039c5fc10b1386e}
+      \strng{fullhash}{02021159f8960aa4b039c5fc10b1386e}
+      \strng{bibnamehash}{02021159f8960aa4b039c5fc10b1386e}
+      \strng{authorbibnamehash}{02021159f8960aa4b039c5fc10b1386e}
+      \strng{authornamehash}{02021159f8960aa4b039c5fc10b1386e}
+      \strng{authorfullhash}{02021159f8960aa4b039c5fc10b1386e}
+      \field{extraname}{56}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Artificial Intelligence in Medicine}
+      \field{title}{Advancing Multiple Sclerosis Diagnosis Through an Innovative Hybrid AI Framework Incorporating Multi-view ResNet and Quantum RIME-Inspired Metaheuristics}
+      \field{volume}{135}
+      \field{year}{2025}
+      \field{pages}{102398}
+      \range{pages}{1}
+    \endentry
+    \entry{statsenko2023}{article}{}
+      \name{author}{1}{}{%
+        {{hash=644326e6e88b9df16696335d4a0551c1}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Statsenko},
+           giveni={S\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{644326e6e88b9df16696335d4a0551c1}
+      \strng{fullhash}{644326e6e88b9df16696335d4a0551c1}
+      \strng{bibnamehash}{644326e6e88b9df16696335d4a0551c1}
+      \strng{authorbibnamehash}{644326e6e88b9df16696335d4a0551c1}
+      \strng{authornamehash}{644326e6e88b9df16696335d4a0551c1}
+      \strng{authorfullhash}{644326e6e88b9df16696335d4a0551c1}
+      \field{extraname}{57}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Systematic Reviews}
+      \field{number}{1}
+      \field{title}{Multimodal Diagnostics in Multiple Sclerosis: Predicting Disability and Conversion from Relapsing-Remitting to Secondary Progressive MS – Protocol for Systematic Review and Meta-Analysis}
+      \field{volume}{12}
+      \field{year}{2023}
+      \field{pages}{134}
+      \range{pages}{1}
+    \endentry
+    \entry{Selvaraju2017}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=aab52117e7c9305d846e0f15625c1f3e}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Selvaraju},
+           giveni={S\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{aab52117e7c9305d846e0f15625c1f3e}
+      \strng{fullhash}{aab52117e7c9305d846e0f15625c1f3e}
+      \strng{bibnamehash}{aab52117e7c9305d846e0f15625c1f3e}
+      \strng{authorbibnamehash}{aab52117e7c9305d846e0f15625c1f3e}
+      \strng{authornamehash}{aab52117e7c9305d846e0f15625c1f3e}
+      \strng{authorfullhash}{aab52117e7c9305d846e0f15625c1f3e}
+      \field{extraname}{58}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the IEEE International Conference on Computer Vision (ICCV)}
+      \field{title}{Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization}
+      \field{year}{2017}
+      \field{pages}{618\bibrangedash 626}
+      \range{pages}{9}
+    \endentry
+    \entry{nabizadeh2022}{article}{}
+      \name{author}{1}{}{%
+        {{hash=7ef2a1b00b4dc913bb7725b722adfd82}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Nabizadeh},
+           giveni={N\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{7ef2a1b00b4dc913bb7725b722adfd82}
+      \strng{fullhash}{7ef2a1b00b4dc913bb7725b722adfd82}
+      \strng{bibnamehash}{7ef2a1b00b4dc913bb7725b722adfd82}
+      \strng{authorbibnamehash}{7ef2a1b00b4dc913bb7725b722adfd82}
+      \strng{authornamehash}{7ef2a1b00b4dc913bb7725b722adfd82}
+      \strng{authorfullhash}{7ef2a1b00b4dc913bb7725b722adfd82}
+      \field{extraname}{59}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Neuroinflammation}
+      \field{title}{Artificial Intelligence in the Diagnosis of Multiple Sclerosis: A Systematic Review}
+      \field{volume}{19}
+      \field{year}{2022}
+      \field{pages}{112}
+      \range{pages}{1}
+    \endentry
+    \entry{Zhao2021}{article}{}
+      \name{author}{1}{}{%
+        {{hash=be4f0c1e6fe7a8ef3f3329cca977ca59}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Moein\bibnamedelima Amin},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{be4f0c1e6fe7a8ef3f3329cca977ca59}
+      \strng{fullhash}{be4f0c1e6fe7a8ef3f3329cca977ca59}
+      \strng{bibnamehash}{be4f0c1e6fe7a8ef3f3329cca977ca59}
+      \strng{authorbibnamehash}{be4f0c1e6fe7a8ef3f3329cca977ca59}
+      \strng{authornamehash}{be4f0c1e6fe7a8ef3f3329cca977ca59}
+      \strng{authorfullhash}{be4f0c1e6fe7a8ef3f3329cca977ca59}
+      \field{extraname}{60}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Current Neurology and Neuroscience Reports}
+      \field{title}{Artificial Intelligence and Multiple Sclerosis}
+      \field{year}{2024}
+    \endentry
+    \entry{kearns2022}{article}{}
+      \name{author}{1}{}{%
+        {{hash=1e8f05f76f1de953ed3eeff5244f84a0}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Kearns},
+           giveni={K\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{1e8f05f76f1de953ed3eeff5244f84a0}
+      \strng{fullhash}{1e8f05f76f1de953ed3eeff5244f84a0}
+      \strng{bibnamehash}{1e8f05f76f1de953ed3eeff5244f84a0}
+      \strng{authorbibnamehash}{1e8f05f76f1de953ed3eeff5244f84a0}
+      \strng{authornamehash}{1e8f05f76f1de953ed3eeff5244f84a0}
+      \strng{authorfullhash}{1e8f05f76f1de953ed3eeff5244f84a0}
+      \field{extraname}{61}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Multiple Sclerosis Journal}
+      \field{number}{5}
+      \field{title}{FutureMS Cohort Profile: A Scottish Multicentre Inception Cohort Study of Relapsing-Remitting Multiple Sclerosis}
+      \field{volume}{28}
+      \field{year}{2022}
+      \field{pages}{647\bibrangedash 656}
+      \range{pages}{10}
+    \endentry
+    \entry{rehak2023}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4a3db86a4bd96bad1718c65fa6a2d1dd}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Rehák\bibnamedelima Bučková},
+           giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{4a3db86a4bd96bad1718c65fa6a2d1dd}
+      \strng{fullhash}{4a3db86a4bd96bad1718c65fa6a2d1dd}
+      \strng{bibnamehash}{4a3db86a4bd96bad1718c65fa6a2d1dd}
+      \strng{authorbibnamehash}{4a3db86a4bd96bad1718c65fa6a2d1dd}
+      \strng{authornamehash}{4a3db86a4bd96bad1718c65fa6a2d1dd}
+      \strng{authorfullhash}{4a3db86a4bd96bad1718c65fa6a2d1dd}
+      \field{extraname}{62}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Brain Imaging and Behavior}
+      \field{title}{Multimodal-neuroimaging machine-learning analysis of motor disability in multiple sclerosis}
+      \field{volume}{17}
+      \field{year}{2023}
+      \field{pages}{18\bibrangedash 34}
+      \range{pages}{17}
+    \endentry
+    \entry{rondinella2023}{article}{}
+      \name{author}{1}{}{%
+        {{hash=920a325f377a4b65dff40b83e6018312}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Rondinella},
+           giveni={R\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{920a325f377a4b65dff40b83e6018312}
+      \strng{fullhash}{920a325f377a4b65dff40b83e6018312}
+      \strng{bibnamehash}{920a325f377a4b65dff40b83e6018312}
+      \strng{authorbibnamehash}{920a325f377a4b65dff40b83e6018312}
+      \strng{authornamehash}{920a325f377a4b65dff40b83e6018312}
+      \strng{authorfullhash}{920a325f377a4b65dff40b83e6018312}
+      \field{extraname}{63}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computers in Biology and Medicine}
+      \field{title}{Boosting multiple sclerosis lesion segmentation through attention mechanism}
+      \field{volume}{161}
+      \field{year}{2023}
+    \endentry
+    \entry{aliedani2024}{article}{}
+      \name{author}{1}{}{%
+        {{hash=137ff0f5a972d206e9e1e61e63e1a96f}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Al-iedani},
+           giveni={A\bibinithyphendelim i\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{137ff0f5a972d206e9e1e61e63e1a96f}
+      \strng{fullhash}{137ff0f5a972d206e9e1e61e63e1a96f}
+      \strng{bibnamehash}{137ff0f5a972d206e9e1e61e63e1a96f}
+      \strng{authorbibnamehash}{137ff0f5a972d206e9e1e61e63e1a96f}
+      \strng{authornamehash}{137ff0f5a972d206e9e1e61e63e1a96f}
+      \strng{authorfullhash}{137ff0f5a972d206e9e1e61e63e1a96f}
+      \field{extraname}{64}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Neuroscience}
+      \field{number}{3}
+      \field{title}{Multi-modal Neuroimaging Signatures Predict Cognitive Decline in Multiple Sclerosis: A 5-Year Longitudinal Study}
+      \field{volume}{44}
+      \field{year}{2024}
+      \field{pages}{567\bibrangedash 579}
+      \range{pages}{13}
+    \endentry
+    \entry{anderhalten2024}{article}{}
+      \name{author}{1}{}{%
+        {{hash=949ffbef357bcb4bfda716d6a04b562b}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Anderhalten},
+           giveni={A\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{949ffbef357bcb4bfda716d6a04b562b}
+      \strng{fullhash}{949ffbef357bcb4bfda716d6a04b562b}
+      \strng{bibnamehash}{949ffbef357bcb4bfda716d6a04b562b}
+      \strng{authorbibnamehash}{949ffbef357bcb4bfda716d6a04b562b}
+      \strng{authornamehash}{949ffbef357bcb4bfda716d6a04b562b}
+      \strng{authorfullhash}{949ffbef357bcb4bfda716d6a04b562b}
+      \field{extraname}{65}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Frontiers in Neurology}
+      \field{title}{Emerging MRI and Biofluid Biomarkers in the Diagnosis and Prognosis of Multiple Sclerosis}
+      \field{volume}{15}
+      \field{year}{2024}
+      \field{pages}{114}
+      \range{pages}{1}
+    \endentry
+    \entry{andorra2024}{article}{}
+      \name{author}{1}{}{%
+        {{hash=120f038e6ebd6d261cdb40d939de683e}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Magi\bibnamedelima Andorraet},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{120f038e6ebd6d261cdb40d939de683e}
+      \strng{fullhash}{120f038e6ebd6d261cdb40d939de683e}
+      \strng{bibnamehash}{120f038e6ebd6d261cdb40d939de683e}
+      \strng{authorbibnamehash}{120f038e6ebd6d261cdb40d939de683e}
+      \strng{authornamehash}{120f038e6ebd6d261cdb40d939de683e}
+      \strng{authorfullhash}{120f038e6ebd6d261cdb40d939de683e}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Neurology}
+      \field{number}{3}
+      \field{title}{Predicting disease severity in multiple sclerosis using multimodal data and machine learning}
+      \field{volume}{271}
+      \field{year}{2024}
+      \field{pages}{1133\bibrangedash 1149}
+      \range{pages}{17}
+    \endentry
+  \enddatalist
+  \missing{filippi2019}
+\endrefsection
+\endinput
+

@@ -1,0 +1,50 @@
+\xpginauxfiletrue 
+\addvspace {10\p@ }
+\setforeignlanguage {english}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Neuropathological changes in MS \blx@tocontentsinit {0}\cite {genetech}. }}{4}{figure.caption.6}%
+\setforeignlanguage {english}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Multiple sclerosis subtypes \blx@tocontentsinit {0}\cite {Hauser2017}.. }}{6}{figure.caption.7}%
+\setforeignlanguage {english}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Raw MRI image (left) with visible bias field; corrected image (right) using N4ITK \blx@tocontentsinit {0}\cite {bias}.}}{10}{figure.caption.8}%
+\setforeignlanguage {english}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Skull-stripping steps in MRI preprocessing: (A) Original input image, (B) Brain tissue contouring, and (C) Removal of non-brain tissues \blx@tocontentsinit {0}\cite {skull}.}}{10}{figure.caption.9}%
+\setforeignlanguage {english}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Denoising results: (Top) Original noisy MRI, (Bottom) Denoised output \blx@tocontentsinit {0}\cite {manjon2010adaptive}.}}{11}{figure.caption.10}%
+\setforeignlanguage {english}
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Intensity normalization stages: Reference (top), input, histogram-matched, and WhiteStripe-normalized results \blx@tocontentsinit {0}\cite {normal}.}}{11}{figure.caption.11}%
+\setforeignlanguage {english}
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Hierarchical overview of Artificial Intelligence techniques in Medical Diagnosis.}}{13}{figure.caption.12}%
+\setforeignlanguage {english}
+\contentsline {figure}{\numberline {1.8}{\ignorespaces Architecture of a fully-connected neural network showing input, hidden, and output layers with weighted connections between neurons.}}{14}{figure.caption.13}%
+\setforeignlanguage {english}
+\setforeignlanguage {english}
+\contentsline {figure}{\numberline {1.9}{\ignorespaces Typical architecture of a Convolutional Neural Network (CNN) showing convolution, activation, pooling, and fully connected layers\blx@tocontentsinit {0}\cite {cnn}.}}{15}{figure.caption.15}%
+\setforeignlanguage {english}
+\contentsline {figure}{\numberline {1.10}{\ignorespaces DenseNet block illustration: each layer receives input from all previous layers, followed by a transition layer \blx@tocontentsinit {0}\cite {dense}.}}{16}{figure.caption.16}%
+\setforeignlanguage {english}
+\contentsline {figure}{\numberline {1.11}{\ignorespaces U-Net architecture: encoder-decoder structure with skip connections, showing convolution, pooling, up-convolution, and output segmentation map \blx@tocontentsinit {0}\cite {Ronneberger2015}.}}{17}{figure.caption.17}%
+\setforeignlanguage {english}
+\addvspace {10\p@ }
+\setforeignlanguage {english}
+\setforeignlanguage {english}
+\addvspace {10\p@ }
+\setforeignlanguage {english}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces The MSFusionXAI pipeline architecture.}}{31}{figure.caption.21}%
+\addvspace {10\p@ }
+\setforeignlanguage {english}
+\setforeignlanguage {english}
+\setforeignlanguage {english}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Performance comparison across four metrics for MRI-only (red), Clinical-only (blue), and Fusion (green) models averaged over five folds. Fusion achieves highest accuracy (91.2\%) and F1-score (90. 2\%). }}{45}{figure.caption.24}%
+\setforeignlanguage {english}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Box plots showing distribution of segmentation metrics across seven test patients..}}{46}{figure.caption.25}%
+\setforeignlanguage {english}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Representative segmentation example showing input FLAIR MRI (left), manual ground truth lesion mask by expert neurologist (center, red overlay), and U-Net predicted mask (right, green overlay).}}{47}{figure.caption.26}%
+\setforeignlanguage {english}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Segmentation network training curves}}{47}{figure.caption.27}%
+\setforeignlanguage {english}
+\setforeignlanguage {english}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Performance comparison of MSFusionXAI against established segmentation architectures. The proposed U-Net with ResNet34 encoder achieves a Dice score of 0.823, outperforming U-Net baseline (0.781), FCN-8s (0.745), and DeepLabv3+ (0. 792), while approaching the performance of Attention U-Net (0.805). }}{48}{figure.caption.29}%
+\setforeignlanguage {english}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Attention weight analysis across 92 subjects showing modality preferences. \textbf {Left:} Scatter plot of learned attention weights with MRI attention (x-axis) vs clinical attention (y-axis). MS patients (red, n=46) cluster toward high MRI attention while healthy subjects (blue, n=46) show more balanced distributions. Dashed line indicates equal weighting (0.5, 0.5). \textbf {Right:} Box plots comparing attention distributions by modality and diagnosis, confirming statistically significant differences between groups.}}{49}{figure.caption.30}%
+\setforeignlanguage {english}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Example BioBERT-generated automated diagnostic report for MS patient (Patient ID: MS-042). The structured report integrates classification results, attention weight analysis, lesion quantification, and clinical correlation into a comprehensive narrative suitable for electronic health record integration. Key sections include AI classification (95.4\% MS probability), attention breakdown (82.4\% MRI, 17.6\% clinical), MRI findings (18 lesions, 12.7 mL total volume), and BioBERT-synthesized clinical impression emphasizing periventricular lesion distribution consistent with demyelinating disease.}}{51}{figure.caption.31}%

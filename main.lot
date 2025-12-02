@@ -1,0 +1,38 @@
+\xpginauxfiletrue 
+\addvspace {10\p@ }
+\setforeignlanguage {english}
+\setforeignlanguage {english}
+\setforeignlanguage {english}
+\setforeignlanguage {english}
+\setforeignlanguage {english}
+\setforeignlanguage {english}
+\setforeignlanguage {english}
+\setforeignlanguage {english}
+\setforeignlanguage {english}
+\contentsline {table}{\numberline {1.1}{\ignorespaces Common Activation Functions in Artificial Neural Networks}}{14}{table.caption.14}%
+\setforeignlanguage {english}
+\setforeignlanguage {english}
+\setforeignlanguage {english}
+\setforeignlanguage {english}
+\contentsline {table}{\numberline {1.2}{\ignorespaces Common types of XAI methods and their applications in medical AI.}}{19}{table.caption.18}%
+\addvspace {10\p@ }
+\setforeignlanguage {english}
+\contentsline {table}{\numberline {2.1}{\ignorespaces Comprehensive comparison of multimodal MS detection and prediction studies. Key abbreviations: DSC=Dice-Sørensen Coefficient, PPV=Positive Predictive Value, AUC=Area Under the Curve, R²=Coefficient of Determination, F1=F1-score.}}{26}{table.caption.19}%
+\setforeignlanguage {english}
+\contentsline {table}{\numberline {2.2}{\ignorespaces Assessment of multimodal MS studies.}}{27}{table.caption.20}%
+\addvspace {10\p@ }
+\setforeignlanguage {english}
+\addvspace {10\p@ }
+\setforeignlanguage {english}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Classification performance across five cross-validation folds for MRI-only, Clinical-only, and Fusion models. Metrics include accuracy, precision, recall, and F1-score. }}{44}{table.caption.22}%
+\setforeignlanguage {english}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Average classification performance across five folds comparing MRI-only, Clinical-only, and Fusion approaches. Standard deviations quantify cross-fold variability.}}{44}{table.caption.23}%
+\setforeignlanguage {english}
+\setforeignlanguage {english}
+\setforeignlanguage {english}
+\setforeignlanguage {english}
+\setforeignlanguage {english}
+\contentsline {table}{\numberline {4.3}{\ignorespaces Comparison of MSFusionXAI segmentation performance with state-of-the-art MS lesion segmentation methods. Dice coefficients, sensitivity, specificity, and architectural approaches are reported. }}{48}{table.caption.28}%
+\setforeignlanguage {english}
+\setforeignlanguage {english}
+\setforeignlanguage {english}
